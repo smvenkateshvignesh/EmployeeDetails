@@ -8,4 +8,34 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!--TextView-->
+    <declare-styleable name="MyTextView">
+        <attr name="setFont" format="enum">
+            <enum name="helveticaneue" value="0" />
+            <enum name="helveticaNeue_bold" value="1" />
+            <enum name="helveticaneue_italic" value="2" />
+            <enum name="helveticaneue_light" value="3" />
+            <enum name="helveticaneue_lightitalic" value="4" />
+            <enum name="helveticaneue_medium" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <string-array name="FontNames">
+        <item>@string/helveticaneue</item>
+        <item>@string/helveticaNeue_bold</item>
+        <item>@string/helveticaneue_italic</item>
+        <item>@string/helveticaneue_light</item>
+        <item>@string/helveticaneue_lightitalic</item>
+        <item>@string/helveticaneue_medium</item>
+    </string-array>
 </resources>

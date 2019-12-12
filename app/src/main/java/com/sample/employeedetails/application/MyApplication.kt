@@ -7,7 +7,7 @@ class MyApplication: Application() {
     init {
         myApplication = this
     }
-    //Vignesh
+    //Vignesh new
     companion object {
         private lateinit var myApplication: Application
         fun getApplicationContext(): Context {

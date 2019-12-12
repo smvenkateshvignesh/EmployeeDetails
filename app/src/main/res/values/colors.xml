@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#04BAF8</color>
-    <color name="colorPrimaryDark">#0067EC</color>
+    <color name="colorPrimary">#401DB5</color>
+    <color name="colorPrimaryDark">#431BB9</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorSemiPrimary">#7DC1F5</color>
     <color name="colorLitePrimary">#DFEDF8</color>
@@ -10,4 +10,9 @@
     <color name="lightGold">#FFCE33</color>
     <color name="semiBlack">#0C0C0C</color>
     <color name="white">#FFFFFF</color>
+    <color name="gTop">#342A9B</color>
+    <color name="gMid">#401DB5</color>
+    <color name="gEnd">#431BB9</color>
+    <color name="profile">#0B0075</color>
+    <color name="underLine">#04BAF8</color>
 </resources>

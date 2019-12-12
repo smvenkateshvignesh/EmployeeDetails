@@ -7,6 +7,7 @@ class MyApplication: Application() {
     init {
         myApplication = this
     }
+    //fhgfhgfj
     companion object {
         private lateinit var myApplication: Application
         fun getApplicationContext(): Context {

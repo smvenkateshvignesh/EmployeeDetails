@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:elevation="@dimen/_2dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_11dp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/card_empProfile"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/czech2" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/card_empName"
+            style="@style/extra_large_text_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="THARUNKUMAR REDDY"
+            android:textColor="@color/semiBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/card_empDesignation"
+            style="@style/small_text_semi_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="(Android Developer)"
+            android:textColor="@color/colorSemiPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/card_empName"
+            app:layout_constraintTop_toBottomOf="@+id/card_empName" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/card_empIdView"
+            style="@style/small_text_semi_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Employee ID:- "
+            android:textColor="@color/Grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/card_empName"
+            app:layout_constraintTop_toBottomOf="@+id/card_empDesignation" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/card_empIdNumber"
+            style="@style/small_text_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2106"
+            android:textColor="@color/lightGold"
+            app:layout_constraintBottom_toBottomOf="@+id/card_empIdView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_empIdView"
+            app:layout_constraintTop_toTopOf="@+id/card_empIdView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/card_detailsEdit"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/_8dp"-->
+        <!--            android:layout_marginEnd="@dimen/_8dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:srcCompat="@drawable/edit_icon" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

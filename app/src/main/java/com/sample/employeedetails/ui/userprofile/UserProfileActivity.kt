@@ -3,6 +3,7 @@ package com.sample.employeedetails.ui.userprofile
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
@@ -20,7 +21,6 @@ class UserProfileActivity : BaseActivity() {
 
     override fun initView(savedInstanceState: Bundle?) {
         getEmployeeDetails()
-
     }
 
     private fun getEmployeeDetails() {
@@ -49,9 +49,7 @@ class UserProfileActivity : BaseActivity() {
                 2->{
                     groupDateOfRelive.visibility=View.VISIBLE
                     txtEmployRelivedHeading.text = "Date Of Reliving"
-
                 }
-
             }
 
         }

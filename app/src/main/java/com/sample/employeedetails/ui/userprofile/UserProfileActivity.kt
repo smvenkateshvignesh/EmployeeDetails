@@ -17,6 +17,9 @@ class UserProfileActivity : BaseActivity() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        profileBackIcon.setOnClickListener {
+            onBackPressed()
+        }
         getEmployeeDetails()
     }
 
@@ -30,7 +33,7 @@ class UserProfileActivity : BaseActivity() {
             txtEmployIdNum.text = employeeDetails.id
             txtDOJDate.text = employeeDetails.joiningDate
             txtDOBDate.text = employeeDetails.dateOfBirth
-            txtSalary.setText(employeeDetails.salary.toString() +"L p.a")
+            txtSalary.text = "${employeeDetails.salary} L p.a"
             textProfileNum.text = employeeDetails.contactPhone
             textProfileAddress.text = employeeDetails.address
 
@@ -48,7 +51,6 @@ class UserProfileActivity : BaseActivity() {
                     txtEmployRelivedHeading.text = "Date Of Reliving"
                 }
             }
-
         }
     }
 }

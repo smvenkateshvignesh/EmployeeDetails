@@ -306,7 +306,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            app:constraint_referenced_ids="txtEmployRelivedHeading,colonEmployRelievedHeading, txtRelievedDate"/>
+            app:constraint_referenced_ids="txtEmployRelivedHeading,colonEmployRelievedHeading,txtRelievedDate"/>
 
         <com.sample.employeedetails.widgets.MyTextView
             android:id="@+id/txtEmployDOBHeading"
@@ -530,7 +530,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+            app:srcCompat="@drawable/icon_back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

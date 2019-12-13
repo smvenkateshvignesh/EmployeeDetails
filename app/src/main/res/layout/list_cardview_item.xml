@@ -92,8 +92,8 @@
 
         <ImageView
             android:id="@+id/empStatusIndicator"
-            android:layout_width="@dimen/_10dp"
-            android:layout_height="@dimen/_10dp"
+            android:layout_width="@dimen/_7dp"
+            android:layout_height="@dimen/_7dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_active_status" />

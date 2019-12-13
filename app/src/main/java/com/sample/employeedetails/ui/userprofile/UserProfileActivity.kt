@@ -3,15 +3,12 @@ package com.sample.employeedetails.ui.userprofile
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.animation.AnimationUtils
-import androidx.core.view.isGone
-import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
-import com.sample.employeedetails.ui.mainactivity.MainActivity
-import com.sample.employeedetails.ui.mainactivity.MainModel
+import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
+import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
 import kotlinx.android.synthetic.main.activity_user_profile.*
 
 class UserProfileActivity : BaseActivity() {
@@ -24,9 +21,9 @@ class UserProfileActivity : BaseActivity() {
     }
 
     private fun getEmployeeDetails() {
-        if (intent.hasExtra(MainActivity.BUNDEL_EMPLOYEE_DETAILS)) {
+        if (intent.hasExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS)) {
 
-            val employeeDetails:MainModel = intent.getSerializableExtra(MainActivity.BUNDEL_EMPLOYEE_DETAILS) as MainModel
+            val employeeDetails:EmployeesListModel = intent.getSerializableExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS) as EmployeesListModel
             Log.e("Employee",employeeDetails.name)
             txtProfileName.text = employeeDetails.name
             txtAboutDescriptionignation.text = employeeDetails.designation

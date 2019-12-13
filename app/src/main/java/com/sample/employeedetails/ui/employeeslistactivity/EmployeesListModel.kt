@@ -1,8 +1,8 @@
-package com.sample.employeedetails.ui.mainactivity
+package com.sample.employeedetails.ui.employeeslistactivity
 
 import java.io.Serializable
 
-class MainModel(
+class EmployeesListModel(
     val profile: Int,
     val name: String,
     val designation: String,

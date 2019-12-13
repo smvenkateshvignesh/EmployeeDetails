@@ -12,14 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.employeedetails.EmployeeDetailsActivity">
+        <activity android:name=".ui.employeedetails.EmployeeDetailsActivity"
+
+        android:theme="@style/AppThemeNoActionBar"/>
+        <activity android:name=".ui.splashscreen.SplashScreenActivity"
+            android:theme="@style/AppThemeNoActionBar">
+        </activity>
+
+        <activity android:name=".ui.userprofile.UserProfileActivity">
 
         </activity>
 
-        <activity android:name=".ui.userprofile.UserProfileActivity"/>
-        <activity
-            android:name=".ui.splashscreen.SplashScreenActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
         <activity android:name=".ui.mainactivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

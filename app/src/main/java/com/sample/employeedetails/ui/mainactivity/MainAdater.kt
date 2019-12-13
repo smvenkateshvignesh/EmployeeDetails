@@ -9,12 +9,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.sample.employeedetails.R
 import com.sample.employeedetails.application.MyApplication
-
 import com.sample.employeedetails.widgets.MyTextView
 
 
 class MainAdater(private val mainModel: ArrayList<MainModel>) :
     RecyclerView.Adapter<MainAdater.ViewHolder>() {
+
+     var employeeDetailsClickListener :EmployeeDetailsClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(parent.context)
@@ -31,7 +32,7 @@ class MainAdater(private val mainModel: ArrayList<MainModel>) :
         holder.bind(mainModel[position])
     }
 
-    class ViewHolder : RecyclerView.ViewHolder {
+   inner class ViewHolder : RecyclerView.ViewHolder {
         fun bind(mainModel: MainModel) {
             employeeName.text = mainModel.name
             empDesignation.setText("(${mainModel.designation})")
@@ -48,6 +49,10 @@ class MainAdater(private val mainModel: ArrayList<MainModel>) :
                 .load(mainModel.profile)
                 .apply(RequestOptions.circleCropTransform())
                 .into(empProfile)
+            empProfile.setOnClickListener{
+
+                employeeDetailsClickListener?.onClick(mainModel)
+            }
         }
 
         private val employeeName: MyTextView
@@ -62,5 +67,13 @@ class MainAdater(private val mainModel: ArrayList<MainModel>) :
             empProfile = itemView.findViewById(R.id.cardEmpProfile)
             empStatus = itemView.findViewById(R.id.empStatusIndicator)
         }
+    }
+
+    fun setOnClickListener(employeeDetailsClickListener :EmployeeDetailsClickListener){
+        this.employeeDetailsClickListener = employeeDetailsClickListener
+    }
+    interface EmployeeDetailsClickListener{
+         fun onClick(mainModel: MainModel)
+
     }
 }

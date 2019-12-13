@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_profile"
     android:orientation="vertical"
+    android:scrollbarThumbVertical="@null"
     tools:context=".ui.userprofile.UserProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,24 +44,22 @@
             app:layout_constraintBottom_toBottomOf="@id/imageView"
             app:layout_constraintEnd_toEndOf="@id/guideline5"
             app:layout_constraintStart_toStartOf="@id/guideline4"
-            app:layout_constraintTop_toTopOf="@id/info" />
-
+            app:layout_constraintTop_toTopOf="@id/txtProfileHeading" />
 
         <ImageView
             android:id="@+id/imgProfilePic"
-            android:layout_width="@dimen/_100dp"
-            android:layout_height="@dimen/_100dp"
+            android:layout_width="@dimen/_110dp"
+            android:layout_height="@dimen/_110dp"
             android:layout_marginTop="@dimen/_50dp"
             android:elevation="@dimen/_30dp"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="@id/imageView"
             app:layout_constraintEnd_toEndOf="@id/guideline5"
             app:layout_constraintStart_toStartOf="@id/guideline4"
-            app:layout_constraintTop_toBottomOf="@id/info"
-            app:srcCompat="@drawable/czech2" />
+            app:layout_constraintTop_toBottomOf="@id/txtProfileHeading"/>
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/info"
+            android:id="@+id/txtProfileHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_15dp"
@@ -68,8 +67,8 @@
             android:gravity="center"
             android:letterSpacing="0.5"
             android:paddingLeft="@dimen/_15dp"
-            android:paddingRight="@dimen/_15dp"
             android:paddingTop="@dimen/_8dp"
+            android:paddingRight="@dimen/_15dp"
             android:paddingBottom="@dimen/_8dp"
             android:text="@string/profile"
             android:textColor="@color/white"
@@ -85,7 +84,6 @@
             app:layout_constraintEnd_toEndOf="@id/guideline5"
             app:layout_constraintStart_toStartOf="@id/guideline4"
             app:layout_constraintTop_toBottomOf="@id/imageView" />
-
 
         <LinearLayout
             android:id="@+id/linearProfileName"
@@ -108,13 +106,13 @@
                 style="@style/medium_text_semi_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="THARUNKUMAR MANNE"
                 android:letterSpacing="0.2"
+                android:text="THARUNKUMAR MANNE"
                 android:textColor="@color/profile"
                 app:layout_constraintWidth_default="wrap" />
 
             <com.sample.employeedetails.widgets.MyTextView
-                android:id="@+id/txtProfileDesignation"
+                android:id="@+id/txtAboutDescriptionignation"
                 style="@style/small_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,9 +123,8 @@
                 app:layout_constraintTop_toBottomOf="@id/txtProfileName" />
         </LinearLayout>
 
-
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/txtProfileAdt"
+            android:id="@+id/txtAboutHeading"
             style="@style/large_text_semi_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -139,13 +136,13 @@
             app:layout_constraintTop_toBottomOf="@id/linearProfileName" />
 
         <View
-            android:id="@+id/view3"
+            android:id="@+id/aboutLine"
             android:layout_width="@dimen/_24dp"
             android:layout_height="@dimen/_3dp"
             android:layout_marginTop="@dimen/_3dp"
             android:background="@color/underLine"
-            app:layout_constraintStart_toStartOf="@id/txtProfileAdt"
-            app:layout_constraintTop_toBottomOf="@id/txtProfileAdt" />
+            app:layout_constraintStart_toStartOf="@id/txtAboutHeading"
+            app:layout_constraintTop_toBottomOf="@id/txtAboutHeading" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
@@ -162,7 +159,7 @@
             app:layout_constraintGuide_percent="0.95" />
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/txtProfileDes"
+            android:id="@+id/txtAboutDescription"
             style="@style/small_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -172,7 +169,216 @@
             android:textDirection="firstStrongLtr"
             app:layout_constraintEnd_toEndOf="@id/guideline5"
             app:layout_constraintStart_toStartOf="@id/guideline4"
-            app:layout_constraintTop_toBottomOf="@id/view3" />
+            app:layout_constraintTop_toBottomOf="@id/aboutLine" />
+
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtDetailsHeading"
+            style="@style/large_text_semi_bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="DETAILS"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtAboutDescription" />
+
+        <View
+            android:id="@+id/detailsLine"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_3dp"
+            android:layout_marginTop="@dimen/_3dp"
+            android:background="@color/underLine"
+            app:layout_constraintStart_toStartOf="@id/txtDetailsHeading"
+            app:layout_constraintTop_toBottomOf="@id/txtDetailsHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmployIdHeading"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="Employ. Id"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/detailsLine" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/colonEmployIdHeading"
+            style="@style/medium_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guidelineC"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployIdHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmployIdHeading"/>
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmployIdNum"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="201"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guidelineC"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployIdHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmployIdHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmployDOJHeading"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="Date Of Joining "
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtEmployIdHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/colonEmployDOJHeading"
+            style="@style/medium_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guidelineC"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployDOJHeading"
+            app:layout_constraintBottom_toBottomOf="@id/txtEmployDOJHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtDOJDate"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20-02-1990"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guidelineC"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployDOJHeading"
+            app:layout_constraintBottom_toBottomOf="@id/txtEmployDOJHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmployRelivedHeading"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="Date Of Relieved"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtEmployDOJHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/colonEmployRelievedHeading"
+            style="@style/medium_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guidelineC"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployRelivedHeading"
+            app:layout_constraintBottom_toBottomOf="@id/txtEmployRelivedHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtRelievedDate"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="28 Nov 2019"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guidelineC"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployRelivedHeading"
+            app:layout_constraintBottom_toBottomOf="@id/txtEmployRelivedHeading" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupDateOfRelive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="txtEmployRelivedHeading,colonEmployRelievedHeading, txtRelievedDate"/>
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmployDOBHeading"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="Date Of Birth"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtEmployRelivedHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/colonEmployDOBHeading"
+            style="@style/medium_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guidelineC"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployDOBHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmployDOBHeading"/>
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtDOBDate"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20-02-1990"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guidelineC"
+            app:layout_constraintTop_toTopOf="@+id/txtEmployDOBHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmployDOBHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtEmploySalaryHeading"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="Salary"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/txtEmployDOBHeading" />
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/colonEmploySalaryHeading"
+            style="@style/medium_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/dullWhite"
+            app:layout_constraintEnd_toEndOf="@id/guidelineC"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/txtEmploySalaryHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmploySalaryHeading"/>
+
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtSalary"
+            style="@style/small_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="$264000 p.a."
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guidelineC"
+            app:layout_constraintTop_toTopOf="@+id/txtEmploySalaryHeading"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmploySalaryHeading" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
@@ -188,6 +394,20 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.80" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
         <ImageView
             android:id="@+id/imageViewFb"
             android:layout_width="@dimen/_30dp"
@@ -195,7 +415,7 @@
             android:layout_marginTop="@dimen/_30dp"
             app:layout_constraintLeft_toLeftOf="@id/guideline6"
             app:layout_constraintRight_toLeftOf="@id/imageViewTwt"
-            app:layout_constraintTop_toBottomOf="@id/txtProfileDes"
+            app:layout_constraintTop_toBottomOf="@id/txtEmploySalaryHeading"
             app:layout_constraintVertical_chainStyle="spread"
             app:srcCompat="@drawable/icon_facebook" />
 
@@ -215,7 +435,7 @@
             android:layout_height="@dimen/_30dp"
             app:layout_constraintLeft_toRightOf="@id/imageViewTwt"
             app:layout_constraintRight_toLeftOf="@id/imageViewSkype"
-            app:layout_constraintTop_toBottomOf="@id/txtProfileDes"
+            app:layout_constraintTop_toBottomOf="@id/txtAboutDescription"
             app:layout_constraintTop_toTopOf="@id/imageViewTwt"
             app:layout_constraintVertical_chainStyle="packed"
             app:srcCompat="@drawable/icon_linkedin" />
@@ -226,7 +446,7 @@
             android:layout_height="@dimen/_30dp"
             app:layout_constraintLeft_toRightOf="@id/imageViewLin"
             app:layout_constraintRight_toRightOf="@id/guideline7"
-            app:layout_constraintTop_toBottomOf="@id/txtProfileDes"
+            app:layout_constraintTop_toBottomOf="@id/txtAboutDescription"
             app:layout_constraintTop_toTopOf="@id/imageViewLin"
             app:layout_constraintVertical_chainStyle="packed"
             app:srcCompat="@drawable/icon_skype" />
@@ -298,8 +518,10 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/guideProfileRight"
             app:layout_constraintStart_toStartOf="@id/guideProfileLeft"
-            app:layout_constraintTop_toBottomOf="@id/textProfileMail" />
-
+            app:layout_constraintTop_toBottomOf="@id/textProfileMail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_30dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

@@ -1,14 +1,19 @@
 package com.sample.employeedetails.ui.mainactivity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
+import com.sample.employeedetails.ui.userprofile.UserProfileActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
     lateinit var mainModel:ArrayList<MainModel>
+    companion object{
+        const val BUNDEL_EMPLOYEE_DETAILS = "Employee details"
+    }
     override fun setLayout(): Int {
         return R.layout.activity_main
     }
@@ -16,15 +21,15 @@ class MainActivity : BaseActivity() {
     override fun initView(savedInstanceState: Bundle?) {
         mainModel= ArrayList()
         mainModel.add(MainModel(R.drawable.advisor,"Tharunkumar Reddy","Android Developer","101","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
-        mainModel.add(MainModel(R.drawable.advisor,"Dheeraj Deevi","IOS Developer","109","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"","01 Aug 2019",1))
+        mainModel.add(MainModel(R.drawable.advisor,"Dheeraj Deevi","IOS Developer","109","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"","01 Aug 2013",1))
 
         mainModel.add(MainModel(R.drawable.advisor,"Tharunkumar Chittimi","Android Developer","102","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
         mainModel.add(MainModel(R.drawable.advisor,"Sindhura","IOS Developer","113","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
-        mainModel.add(MainModel(R.drawable.advisor,"Yugandhar Vadlamudi","Android Developer","102","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",0))
+        mainModel.add(MainModel(R.drawable.advisor,"Yugandhar Vadlamudi","Android Developer","102","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2014",0))
 
         mainModel.add(MainModel(R.drawable.advisor,"Vignesh Venkatesh","Android Developer","103","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
         mainModel.add(MainModel(R.drawable.advisor,"Lahari","IOS Developer","110","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
-        mainModel.add(MainModel(R.drawable.advisor,"Naveen Kumar","Android Developer","102","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",0))
+        mainModel.add(MainModel(R.drawable.advisor,"Naveen Kumar","Android Developer","102","Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ","9483578321",33.3F,"28 Nov 1997","01 Aug 2014",0))
 
         mainModel.add(MainModel(R.drawable.advisor,"Ramya Emuri","Android Developer","104","Tirupathi","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
         mainModel.add(MainModel(R.drawable.advisor,"Sudheer","IOS Developer","112","Tirupathi","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
@@ -39,9 +44,16 @@ class MainActivity : BaseActivity() {
         mainModel.add(MainModel(R.drawable.advisor,"Usha Rani","Android Developer","108","Tirupathi","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
         mainModel.add(MainModel(R.drawable.advisor,"Suneel","IOS Developer","111","Tirupathi","9483578321",33.3F,"28 Nov 1997","01 Aug 2019",1))
         employeeProfileRecycler.layoutManager = LinearLayoutManager(this)
-        employeeProfileRecycler.adapter = MainAdater(mainModel)
+        val adapter =MainAdater(mainModel)
+        adapter.setOnClickListener(object :MainAdater.EmployeeDetailsClickListener{
+            override fun onClick(mainModel: MainModel) {
+                val myIntent = Intent(this@MainActivity,UserProfileActivity::class.java)
+                myIntent.putExtra(BUNDEL_EMPLOYEE_DETAILS,mainModel)
+                startActivity(myIntent)
+            }
+
+        })
+        employeeProfileRecycler.adapter = adapter
 
     }
-
-
 }

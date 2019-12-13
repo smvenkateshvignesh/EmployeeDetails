@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/card_empProfile"
+            android:id="@+id/cardEmpProfile"
             android:layout_width="@dimen/_70dp"
             android:layout_height="@dimen/_70dp"
             android:scaleType="fitXY"
@@ -28,7 +28,7 @@
             app:srcCompat="@drawable/czech2" />
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/card_empName"
+            android:id="@+id/cardEmpName"
             style="@style/large_text_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,36 +37,36 @@
             android:text="THARUNKUMAR REDDY"
             android:textAllCaps="true"
             android:textColor="@color/semiBlack"
-            app:layout_constraintBottom_toTopOf="@+id/card_empDesignation"
+            app:layout_constraintBottom_toTopOf="@+id/cardEmpDesignation"
             app:layout_constraintEnd_toStartOf="@+id/empStatusIndicator"
-            app:layout_constraintStart_toEndOf="@+id/card_empProfile"
+            app:layout_constraintStart_toEndOf="@+id/cardEmpProfile"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/card_empDesignation"
+            android:id="@+id/cardEmpDesignation"
             style="@style/small_text_semi_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_2dp"
             android:text="(Android Developer)"
             android:textColor="@color/colorSemiPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/card_empIdView"
+            app:layout_constraintBottom_toTopOf="@+id/cardEmpIdView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/card_empName"
-            app:layout_constraintTop_toBottomOf="@+id/card_empName" />
+            app:layout_constraintStart_toStartOf="@+id/cardEmpName"
+            app:layout_constraintTop_toBottomOf="@+id/cardEmpName" />
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/card_empIdView"
+            android:id="@+id/cardEmpIdView"
             style="@style/small_text_semi_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5dp"
             android:text="Employee ID:- "
             android:textColor="@color/Grey"
-            app:layout_constraintStart_toStartOf="@+id/card_empName"
-            app:layout_constraintTop_toBottomOf="@+id/card_empDesignation" />
+            app:layout_constraintStart_toStartOf="@+id/cardEmpName"
+            app:layout_constraintTop_toBottomOf="@+id/cardEmpDesignation" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/card_empStatusMark"-->
@@ -80,15 +80,15 @@
 <!--            app:layout_constraintTop_toTopOf="@+id/card_empName" />-->
 
         <com.sample.employeedetails.widgets.MyTextView
-            android:id="@+id/card_empIdNumber"
+            android:id="@+id/cardEmpIdNumber"
             style="@style/small_text_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="2106"
             android:textColor="@color/lightGold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/card_empIdView"
-            app:layout_constraintTop_toTopOf="@+id/card_empIdView" />
+            app:layout_constraintStart_toEndOf="@+id/cardEmpIdView"
+            app:layout_constraintTop_toTopOf="@+id/cardEmpIdView" />
 
         <ImageView
             android:id="@+id/empStatusIndicator"

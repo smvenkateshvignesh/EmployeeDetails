@@ -37,13 +37,13 @@ class MainAdater(private val mainModel: ArrayList<MainModel>) :
             empDesignation.setText("(${mainModel.designation})")
             empId.text = mainModel.id
             empProfile.setImageResource(mainModel.profile)
-if (mainModel.status==1){
-    empStatus.setImageResource(R.drawable.ic_active_status)
-}else if (mainModel.status==2){
-    empStatus.setImageResource(R.drawable.ic_hold_status)
-}else{
-    empStatus.setImageResource(R.drawable.ic_inactive_status)
-}
+            if (mainModel.status==1){
+                empStatus.setImageResource(R.drawable.ic_active_status)
+            }else if (mainModel.status==2){
+                empStatus.setImageResource(R.drawable.ic_hold_status)
+            }else{
+                empStatus.setImageResource(R.drawable.ic_inactive_status)
+            }
             Glide.with(MyApplication.getApplicationContext())
                 .load(mainModel.profile)
                 .apply(RequestOptions.circleCropTransform())
@@ -56,10 +56,10 @@ if (mainModel.status==1){
         private val empProfile: ImageView
         private val empStatus: ImageView
         constructor(itemView: View) : super(itemView) {
-            employeeName = itemView.findViewById(R.id.card_empName)
-            empDesignation = itemView.findViewById(R.id.card_empDesignation)
-            empId = itemView.findViewById(R.id.card_empIdNumber)
-            empProfile = itemView.findViewById(R.id.card_empProfile)
+            employeeName = itemView.findViewById(R.id.cardEmpName)
+            empDesignation = itemView.findViewById(R.id.cardEmpDesignation)
+            empId = itemView.findViewById(R.id.cardEmpIdNumber)
+            empProfile = itemView.findViewById(R.id.cardEmpProfile)
             empStatus = itemView.findViewById(R.id.empStatusIndicator)
         }
     }

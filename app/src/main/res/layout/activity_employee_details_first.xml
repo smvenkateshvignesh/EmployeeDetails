@@ -99,7 +99,7 @@
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_projects_worked"
         app:setText="@string/projects"
-        android:id="@+id/card11"
+        android:id="@+id/cardProjects"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/_150dp"
@@ -111,7 +111,7 @@
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_salary_progress"
         app:setText="@string/salary_progress"
-        android:id="@+id/card12"
+        android:id="@+id/cardSalaryProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_150dp"
@@ -121,52 +121,52 @@
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_attendance"
         app:setText="@string/attendance"
-        android:id="@+id/card21"
+        android:id="@+id/cardAttendance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginRight="@dimen/_10dp"
         app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card11">
+        app:layout_constraintTop_toBottomOf="@id/cardProjects">
 
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_team"
         app:setText="@string/team"
-        android:id="@+id/card22"
+        android:id="@+id/cardTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_10dp"
         android:layout_marginTop="@dimen/_10dp"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card11">
+        app:layout_constraintTop_toBottomOf="@id/cardProjects">
 
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_device_info"
         app:setText="@string/device_info"
-        android:id="@+id/card31"
+        android:id="@+id/cardDeviceInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginRight="@dimen/_120dp"
         app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card21">
+        app:layout_constraintTop_toBottomOf="@id/cardAttendance">
 
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
         app:setImage="@drawable/ic_profile"
         app:setText="@string/_profile"
-        android:id="@+id/card32"
+        android:id="@+id/cardProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_120dp"
         android:layout_marginTop="@dimen/_10dp"
         app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card21">
+        app:layout_constraintTop_toBottomOf="@id/cardAttendance">
 
     </com.sample.employeedetails.widgets.MyCardView>
 

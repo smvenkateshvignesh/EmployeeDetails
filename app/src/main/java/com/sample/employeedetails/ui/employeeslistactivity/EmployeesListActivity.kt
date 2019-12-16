@@ -75,7 +75,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         )
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.img_dummy_profile_one,
+                R.drawable.dummy_female_profile_pic,
                 "Sindhura",
                 "IOS Developer",
                 "113",
@@ -118,7 +118,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         )
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.img_dummy_profile_two,
+                R.drawable.dummy_female_profile_pic,
                 "Lahari",
                 "IOS Developer",
                 "110",
@@ -147,7 +147,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
 
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.img_dummy_profile_two,
+                R.drawable.dummy_female_profile_pic,
                 "Ramya Emuri",
                 "Android Developer",
                 "104",
@@ -219,7 +219,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         )
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.img_dummy_profile_one,
+                R.drawable.dummy_female_profile_pic,
                 "Sailekia",
                 "IOS Developer",
                 "115",
@@ -248,7 +248,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         )
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.img_dummy_profile_one,
+                R.drawable.dummy_female_profile_pic,
                 "Usha Rani",
                 "Android Developer",
                 "108",

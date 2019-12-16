@@ -112,4 +112,15 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="MyCategory">
+        <attr name="setImagePic" format="reference">
+        </attr>
+        <attr name="setTextHeading" format="string">
+        </attr>
+        <attr name="setCornersCard" format="dimension">
+        </attr>
+        <attr name="setBackgroundCard" format="color">
+        </attr>
+    </declare-styleable>
+
 </resources>

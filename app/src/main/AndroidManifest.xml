@@ -18,11 +18,7 @@
         </activity>
         <activity android:name=".ui.splashscreen.SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".ui.userprofile.UserProfileActivity"/>
@@ -30,6 +26,13 @@
 
         <activity android:name=".ui.employeeslistactivity.EmployeesListActivity">
 
+        </activity>
+        <activity android:name=".ui.hrcategory.HrCategoryActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
     </application>

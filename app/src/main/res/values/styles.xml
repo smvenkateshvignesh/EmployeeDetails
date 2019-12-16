@@ -93,4 +93,16 @@
         <item>@string/helveticaneue_lightitalic</item>
         <item>@string/helveticaneue_medium</item>
     </string-array>
+
+    <declare-styleable name="MyCardView">
+        <attr name="setImage" format="reference">
+        </attr>
+        <attr name="setText" format="string">
+        </attr>
+        <attr name="setCorners" format="dimension">
+        </attr>
+        <attr name="setBackground" format="color">
+        </attr>
+    </declare-styleable>
+
 </resources>

@@ -37,7 +37,7 @@ class MyCardView : LinearLayout {
         val typedArray =
             context.obtainStyledAttributes(attrs, R.styleable.MyCardView, defStyleAttr, 0)
         val image = typedArray.getDrawable(R.styleable.MyCardView_setImage)
-        val text = typedArray.getText(R.styleable.MyCardView_setText)
+        val text:String? = typedArray.getString(R.styleable.MyCardView_setText)
         val backgroundColor = typedArray.getColor(
             R.styleable.MyCardView_setBackground,
             ContextCompat.getColor(context, R.color.lightGrey)
@@ -47,7 +47,7 @@ class MyCardView : LinearLayout {
         cardMain?.setContentPadding(corners, corners, corners, corners)
         cardMain?.setCardBackgroundColor(backgroundColor)
         setIcon(image)
-        setHeader(text.toString())
+        setHeader(text)
         typedArray.recycle()
 
     }
@@ -65,9 +65,9 @@ class MyCardView : LinearLayout {
         }
     }
 
-    fun setHeader(header: String) {
+    fun setHeader(header: String?) {
         txtCardHeading?.let {
-            it.text = header
+            it.text = header?:""
         }
     }
 

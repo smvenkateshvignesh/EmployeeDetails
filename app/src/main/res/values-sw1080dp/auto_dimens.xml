@@ -59,6 +59,7 @@
 	<dimen name="_15dp">45.00dp</dimen>
 	<dimen name="_16dp">48.00dp</dimen>
 	<dimen name="_17dp">51.00dp</dimen>
+	<dimen name="_180dp">540.00dp</dimen>
 	<dimen name="_18dp">54.00dp</dimen>
 	<dimen name="_19dp">57.00dp</dimen>
 	<dimen name="_1dp">3.00dp</dimen>

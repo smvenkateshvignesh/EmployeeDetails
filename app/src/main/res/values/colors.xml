@@ -16,5 +16,6 @@
     <color name="profile">#0B0075</color>
     <color name="underLine">#04BAF8</color>
     <color name="dullWhite">#D3CECE</color>
+    <color name="employee_transparent">#85431BB9</color>
     <color name="cardSemiBlack">#455A65</color>
 </resources>

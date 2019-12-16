@@ -8,7 +8,7 @@
         android:id="@+id/cardMain"
         app:cardUseCompatPadding="true"
         android:layout_width="@dimen/_140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_140dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/_12dp"
         app:cardElevation="@dimen/_5dp">
@@ -17,30 +17,31 @@
             android:id="@+id/linearBackground"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="top"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/_2dp">
 
             <ImageView
                 android:id="@+id/imgCardIcon"
-                android:layout_width="@dimen/_50dp"
-                android:layout_height="@dimen/_50dp"
-                android:layout_marginTop="@dimen/_10dp"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_60dp"
                 android:src="@drawable/img_dummy_profile_one"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintBottom_toTopOf="@id/txtCardHeading"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.sample.employeedetails.widgets.MyTextView
                 android:id="@+id/txtCardHeading"
-                style="@style/extra_large_text_semi_bold"
-                android:layout_width="wrap_content"
+                style="@style/large_text"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20dp"
-                android:layout_marginBottom="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Employee"
+                android:gravity="center"
                 android:textColor="@color/cardSemiBlack"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

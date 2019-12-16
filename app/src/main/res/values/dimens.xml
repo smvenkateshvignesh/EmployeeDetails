@@ -151,6 +151,8 @@
     <dimen name="_149dp">149dp</dimen>
     <dimen name="_150dp">150dp</dimen>
 
+    <dimen name="_180dp">180dp</dimen>
+
 
     <dimen name="_1sp">1sp</dimen>
     <dimen name="_2sp">2sp</dimen>

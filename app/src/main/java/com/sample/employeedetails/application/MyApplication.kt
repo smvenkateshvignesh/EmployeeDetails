@@ -7,7 +7,6 @@ class MyApplication: Application() {
     init {
         myApplication = this
     }
-    //this my first commit
     companion object {
         private lateinit var myApplication: Application
         fun getApplicationContext(): Context {

@@ -97,8 +97,8 @@
 
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_projects_worked"
+        app:setText="@string/projects"
         android:id="@+id/card11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,8 +109,8 @@
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_salary_progress"
+        app:setText="@string/salary_progress"
         android:id="@+id/card12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,8 +119,8 @@
         app:layout_constraintTop_toBottomOf="@id/guideEmployeeDetailsDivider30" />
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_attendance"
+        app:setText="@string/attendance"
         android:id="@+id/card21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,8 +132,8 @@
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_team"
+        app:setText="@string/team"
         android:id="@+id/card22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -145,8 +145,8 @@
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_device_info"
+        app:setText="@string/device_info"
         android:id="@+id/card31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -158,8 +158,8 @@
     </com.sample.employeedetails.widgets.MyCardView>
 
     <com.sample.employeedetails.widgets.MyCardView
-        app:setImage="@drawable/img_dummy_profile_one"
-        app:setText="Profile"
+        app:setImage="@drawable/ic_profile"
+        app:setText="@string/_profile"
         android:id="@+id/card32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

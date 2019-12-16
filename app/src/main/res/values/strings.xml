@@ -16,6 +16,12 @@
     <string name="android_developer">Android Developer</string>
     <string name="tharunkumar_chittimi">TharunKumar Chittimi</string>
     <string name="profile">PROFILE</string>
+    <string name="device_info">Device Info</string>
+    <string name="_profile">Profile</string>
+    <string name="team">Team</string>
+    <string name="attendance">Attendance</string>
+    <string name="salary_progress">Salary Progress</string>
+    <string name="projects">Projects</string>
 
 
 </resources>

@@ -40,7 +40,7 @@ class MyCardView : LinearLayout {
         val text:String? = typedArray.getString(R.styleable.MyCardView_setText)
         val backgroundColor = typedArray.getColor(
             R.styleable.MyCardView_setBackground,
-            ContextCompat.getColor(context, R.color.lightGrey)
+            ContextCompat.getColor(context, R.color.white)
         )
         val corners = typedArray.getInteger(R.styleable.MyCardView_setCorners, -1)
         inflateView()

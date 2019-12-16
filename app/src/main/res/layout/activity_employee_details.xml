@@ -103,6 +103,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/_5dp"
+        app:setText="@string/projects"
+        app:setImage="@drawable/ic_projects_worked"
         app:layout_constraintRight_toRightOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/guideEmployeeDetailsDivider30">
 
@@ -112,6 +114,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_5dp"
+        app:setText="@string/salary_progress"
+        app:setImage="@drawable/ic_salary_progress"
         app:layout_constraintLeft_toLeftOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/guideEmployeeDetailsDivider30"/>
     <com.sample.employeedetails.widgets.MyCardView
@@ -120,6 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginRight="@dimen/_5dp"
+        app:setText="@string/attendance"
+        app:setImage="@drawable/ic_attendance"
         app:layout_constraintRight_toRightOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/card11">
 
@@ -130,6 +136,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginLeft="@dimen/_5dp"
+        app:setText="@string/team"
+        app:setImage="@drawable/ic_team"
         app:layout_constraintLeft_toLeftOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/card11">
 
@@ -140,6 +148,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginRight="@dimen/_5dp"
+        app:setText="@string/device_info"
+        app:setImage="@drawable/ic_device_info"
         app:layout_constraintRight_toRightOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/card21">
 
@@ -150,6 +160,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
         android:layout_marginLeft="@dimen/_5dp"
+        app:setText="@string/_profile"
+        app:setImage="@drawable/ic_profile"
         app:layout_constraintLeft_toLeftOf="@id/guideEmployeeDetailsCenter"
         app:layout_constraintTop_toBottomOf="@id/card21">
 

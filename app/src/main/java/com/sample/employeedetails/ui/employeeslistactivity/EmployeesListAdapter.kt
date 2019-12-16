@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -35,7 +36,7 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
         holder.bind(searchList[position])
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder( itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(searchList: EmployeesListModel) {
             employeeName.text = searchList.name
             empDesignation.text = "(${searchList.designation})"
@@ -52,7 +53,7 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
                 .load(searchList.profile)
                 .apply(RequestOptions.circleCropTransform())
                 .into(empProfile)
-            empProfile.setOnClickListener {
+            cardEmployeeDetails.setOnClickListener {
 
                 employeeDetailsClickListener?.onClick(searchList)
             }
@@ -63,6 +64,7 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
         private val empId: MyTextView
         private val empProfile: ImageView
         private val empStatus: ImageView
+        private val cardEmployeeDetails:CardView
 
         init {
             employeeName = itemView.findViewById(R.id.cardEmpName)
@@ -70,6 +72,7 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
             empId = itemView.findViewById(R.id.cardEmpIdNumber)
             empProfile = itemView.findViewById(R.id.cardEmpProfile)
             empStatus = itemView.findViewById(R.id.empStatusIndicator)
+            cardEmployeeDetails=itemView.findViewById(R.id.cardEmployeeDetails)
         }
     }
 

@@ -16,6 +16,7 @@ class EmployeeDetailsActivity : BaseActivity() {
     private var isShowingInfo = false
 
     override fun setLayout(): Int {
+        makeFullScreen()
        return R.layout.activity_employee_details_first
     }
 

@@ -25,6 +25,9 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
 
     //passing the items to the RecyclerView
     override fun initView(savedInstanceState: Bundle?) {
+        imageView.setOnClickListener {
+            onBackPressed()
+        }
         mySearchView = findViewById(R.id.empSearchView)
         employeesListModel = ArrayList()
         employeesListModel.add(

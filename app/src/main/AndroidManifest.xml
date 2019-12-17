@@ -14,21 +14,24 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".ui.employeedetails.EmployeeDetailsActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+            android:theme="@style/AppThemeFullScreen"></activity>
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
 
         </activity>
-        <activity android:name=".ui.userprofile.UserProfileActivity" />
-        <activity android:name=".ui.employeeslistactivity.EmployeesListActivity"></activity>
-        <activity android:name=".ui.hrcategory.HrCategoryActivity"></activity>
-        <activity android:name=".ui.hrcategory.deviceinfo.DeviceInfoActivity">
+        <activity android:name=".ui.userprofile.UserProfileActivity"
+            android:theme="@style/AppThemeFullScreen"/>
+        <activity android:name=".ui.employeeslistactivity.EmployeesListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.hrcategory.HrCategoryActivity"></activity>
+        <activity android:name=".ui.hrcategory.deviceinfo.DeviceInfoActivity">
+
         </activity>
     </application>
 

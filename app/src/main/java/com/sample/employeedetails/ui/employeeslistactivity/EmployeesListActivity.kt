@@ -1,14 +1,20 @@
 package com.sample.employeedetails.ui.employeeslistactivity
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.annotation.DimenRes
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeedetails.EmployeeDetailsActivity
-import com.sample.employeedetails.ui.userprofile.UserProfileActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.security.AccessController.getContext
+
 
 class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryTextListener {
     lateinit var employeesListModel: ArrayList<EmployeesListModel>
@@ -118,20 +124,6 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         )
         employeesListModel.add(
             EmployeesListModel(
-                R.drawable.dummy_female_profile_pic,
-                "Lahari",
-                "IOS Developer",
-                "110",
-                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
-                "9483578321",
-                33.3F,
-                "28 Nov 1997",
-                "01 Aug 2019",
-                1
-            )
-        )
-        employeesListModel.add(
-            EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
                 "Naveen Kumar",
                 "Android Developer",
@@ -142,6 +134,21 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 "28 Nov 1997",
                 "01 Aug 2014",
                 0
+            )
+        )
+
+        employeesListModel.add(
+            EmployeesListModel(
+                R.drawable.dummy_female_profile_pic,
+                "Lahari",
+                "IOS Developer",
+                "110",
+                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
+                "9483578321",
+                33.3F,
+                "28 Nov 1997",
+                "01 Aug 2019",
+                1
             )
         )
 
@@ -174,20 +181,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             )
         )
 
-        employeesListModel.add(
-            EmployeesListModel(
-                R.drawable.img_dummy_profile_two,
-                "Satish Kongondhi",
-                "Android Developer",
-                "105",
-                "Tirupathi",
-                "9483578321",
-                33.3F,
-                "28 Nov 1997",
-                "01 Aug 2019",
-                2
-            )
-        )
+
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
@@ -202,7 +196,20 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 1
             )
         )
-
+        employeesListModel.add(
+            EmployeesListModel(
+                R.drawable.img_dummy_profile_two,
+                "Satish Kongondhi",
+                "Android Developer",
+                "105",
+                "Tirupathi",
+                "9483578321",
+                33.3F,
+                "28 Nov 1997",
+                "01 Aug 2019",
+                2
+            )
+        )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
@@ -274,7 +281,10 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 1
             )
         )
-        employeeProfileRecycler.layoutManager = LinearLayoutManager(this)
+        employeeProfileRecycler.layoutManager = GridLayoutManager(this,3)
+        val itemOffsetDecoration1 =
+            ItemOffsetDecoration(this, R.dimen._10dp)
+        employeeProfileRecycler.addItemDecoration(itemOffsetDecoration1)
         myEmpAdapter = EmployeesListAdapter(employeesListModel)
         mySearchView.setOnQueryTextListener(this)
         myEmpAdapter.setOnClickListener(object : EmployeesListAdapter.EmployeeDetailsClickListener {
@@ -302,5 +312,22 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         //Setting the adapter when the text is changed in the SearchView
         myEmpAdapter.getFilter().filter(newText)
         return false
+    }
+    class ItemOffsetDecoration(private val mItemOffset: Int) : ItemDecoration() {
+
+        constructor(context: Context, @DimenRes itemOffsetId: Int) : this(
+            context.resources.getDimensionPixelSize(
+                itemOffsetId
+            )
+        )
+
+        override fun getItemOffsets(
+            outRect: Rect, view: View, parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
+            super.getItemOffsets(outRect, view, parent, state)
+            outRect[mItemOffset, mItemOffset, mItemOffset] = mItemOffset
+        }
+
     }
 }

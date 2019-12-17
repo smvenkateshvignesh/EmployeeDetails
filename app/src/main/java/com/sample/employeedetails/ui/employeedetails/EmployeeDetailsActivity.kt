@@ -20,7 +20,6 @@ class EmployeeDetailsActivity : BaseActivity() {
     private var employeeDetails: EmployeesListModel?= null
 
     override fun setLayout(): Int {
-        makeFullScreen()
        return R.layout.activity_employee_details_first
     }
 

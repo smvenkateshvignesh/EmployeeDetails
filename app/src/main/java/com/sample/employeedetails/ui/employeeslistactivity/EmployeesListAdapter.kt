@@ -7,12 +7,14 @@ import android.widget.Filter
 import android.widget.Filterable
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.sample.employeedetails.R
 import com.sample.employeedetails.application.MyApplication
 import com.sample.employeedetails.widgets.MyTextView
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>) :
@@ -39,15 +41,15 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
     inner class ViewHolder( itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(searchList: EmployeesListModel) {
             employeeName.text = searchList.name
-            empDesignation.text = "(${searchList.designation})"
-            empId.text = searchList.id
-            empProfile.setImageResource(searchList.profile)
+//            empDesignation.text = "(${searchList.designation})"
+            empId.text = "ID:- ${searchList.id}"
+//            empProfile.setImageResource(searchList.profile)
             if (searchList.status == 1) {
-                empStatus.setImageResource(R.drawable.ic_active_status)
+                empStatus.setBackgroundResource(R.drawable.ic_active_status)
             } else if (searchList.status == 2) {
-                empStatus.setImageResource(R.drawable.ic_hold_status)
+                empStatus.setBackgroundResource(R.drawable.ic_hold_status)
             } else {
-                empStatus.setImageResource(R.drawable.ic_inactive_status)
+                empStatus.setBackgroundResource(R.drawable.ic_inactive_status)
             }
             Glide.with(MyApplication.getApplicationContext())
                 .load(searchList.profile)
@@ -60,15 +62,15 @@ class EmployeesListAdapter(private val searchList: ArrayList<EmployeesListModel>
         }
 
         private val employeeName: MyTextView
-        private val empDesignation: MyTextView
+//        private val empDesignation: MyTextView
         private val empId: MyTextView
-        private val empProfile: ImageView
-        private val empStatus: ImageView
-        private val cardEmployeeDetails:CardView
+        private val empProfile: CircleImageView
+        private val empStatus: View
+        private val cardEmployeeDetails:ConstraintLayout
 
         init {
             employeeName = itemView.findViewById(R.id.cardEmpName)
-            empDesignation = itemView.findViewById(R.id.cardEmpDesignation)
+//            empDesignation = itemView.findViewById(R.id.cardEmpDesignation)
             empId = itemView.findViewById(R.id.cardEmpIdNumber)
             empProfile = itemView.findViewById(R.id.cardEmpProfile)
             empStatus = itemView.findViewById(R.id.empStatusIndicator)

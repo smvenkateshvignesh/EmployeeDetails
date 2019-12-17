@@ -13,7 +13,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        makeFullScreen()
+
         setContentView(setLayout())
         initView(savedInstanceState)
     }

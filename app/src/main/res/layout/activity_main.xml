@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.employeeslistactivity.EmployeesListActivity">
+    android:orientation="vertical"
+    tools:context=".ui.employeeslistactivity.EmployeesListActivity"
+    android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +36,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="EMPLOYEE DETAILS"
-                android:textColor="@color/white" />
+                android:text="Employees"
+                android:textColor="@color/semiBlack" />
 
             <SearchView
                 android:id="@+id/empSearchView"
@@ -43,30 +45,203 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:background="@color/colorPrimary" />
+                android:background="@color/white"
+                android:queryHint="Search.." />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/employeeProfileRecycler"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-    <com.sample.employeedetails.widgets.MyTextView
-        android:id="@+id/empDataNotFound"
-        android:layout_width="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No Data Found"
-       style="@style/large_text_semi_bold"
-        android:visibility="invisible"
-        android:layout_marginTop="@dimen/_45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/departmentCategoryText"
+                style="@style/large_text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:text="Category"
+                android:layout_marginTop="@dimen/_15dp"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                android:id="@+id/departmentChoise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/departmentCategoryText"
+                app:tbgCheckedButton="@id/AllDepartments"
+                app:tbgChildSpacingForLastRow="align"
+                app:tbgRowSpacing="@dimen/_10dp">
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/AllDepartments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="All" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/AndroidTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Android" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/IOSTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="IOS" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/Management"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Management" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/Managers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Managers" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/TestingTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Testing" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/WebTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Web" />
+
+
+            </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+<!--            <View-->
+<!--                android:id="@+id/categoryView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="@dimen/_2dp"-->
+<!--                android:layout_marginLeft="@dimen/_20dp"-->
+<!--                android:layout_marginTop="@dimen/_5dp"-->
+<!--                android:layout_marginRight="@dimen/_20dp"-->
+<!--                android:background="@color/Grey"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/departmentChoise" />-->
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/branchCategoryText"
+                style="@style/large_text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:text="Branch"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/departmentChoise" />
+
+            <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+                android:id="@+id/BranchesChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/branchCategoryText"
+                app:tbgCheckedButton="@id/AllBranches"
+                app:tbgChildSpacingForLastRow="align"
+                app:tbgRowSpacing="@dimen/_10dp">
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/AllBranches"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="All" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/tirupathiBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Chennai" />
+
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/chennaiBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:text="Tirupathi" />
+
+
+            </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+            <View
+                android:id="@+id/branchView"
+                android:layout_width="0dp"
+                android:layout_height="0.025dp"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_20dp"
+                android:background="@color/Grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BranchesChoice" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/employeesText"
+                style="@style/large_text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20dp"
+                android:text="Employees"
+                android:layout_marginTop="@dimen/_15dp"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/branchView"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/employeeProfileRecycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/employeesText" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/empDataNotFound"
+                style="@style/large_text_semi_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Data Found"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/employeesText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

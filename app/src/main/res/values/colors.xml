@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#401DB5</color>
-    <color name="colorPrimaryDark">#431BB9</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorSemiPrimary">#7DC1F5</color>
     <color name="colorLitePrimary">#DFEDF8</color>
@@ -18,4 +18,5 @@
     <color name="dullWhite">#D3CECE</color>
     <color name="employee_transparent">#85431BB9</color>
     <color name="cardSemiBlack">#455A65</color>
+    <color name="liteBlue">#3799f4</color>
 </resources>

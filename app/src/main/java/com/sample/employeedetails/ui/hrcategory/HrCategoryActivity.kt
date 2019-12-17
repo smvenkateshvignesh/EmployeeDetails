@@ -36,7 +36,6 @@ class HrCategoryActivity : BaseActivity() {
     }
 
     override fun setLayout(): Int {
-        makeFullScreen()
         return R.layout.activity_hr_category_first
     }
 

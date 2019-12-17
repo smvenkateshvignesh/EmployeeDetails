@@ -9,11 +9,11 @@ import androidx.annotation.DimenRes
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
+import com.nex3z.togglebuttongroup.SingleSelectToggleGroup
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeedetails.EmployeeDetailsActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.security.AccessController.getContext
 
 
 class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryTextListener {
@@ -36,34 +36,8 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         }
         mySearchView = findViewById(R.id.empSearchView)
         employeesListModel = ArrayList()
-        employeesListModel.add(
-            EmployeesListModel(
-                R.drawable.img_dummy_profile_two,
-                "Tharunkumar Reddy",
-                "Android Developer",
-                "101",
-                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
-                "9483578321",
-                33.3F,
-                "28 Nov 1997",
-                "01 Aug 2019",
-                1
-            )
-        )
-        employeesListModel.add(
-            EmployeesListModel(
-                R.drawable.img_dummy_profile_one,
-                "Dheeraj Deevi",
-                "IOS Developer",
-                "109",
-                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
-                "9483578321",
-                33.3F,
-                "28 Nov 1997",
-                "01 Aug 2019",
-                1
-            )
-        )
+        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_two, "Tharunkumar Reddy", "Android Developer", "101", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1, "Tirupathi"))
+        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_one, "Dheeraj Deevi", "IOS Developer", "109", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1,"Tirupathi"))
 
         employeesListModel.add(
             EmployeesListModel(
@@ -76,7 +50,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -90,7 +64,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -104,7 +78,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                0
+                0,"Tirupathi"
             )
         )
 
@@ -119,7 +93,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -133,7 +107,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2014",
-                0
+                0,"Tirupathi"
             )
         )
 
@@ -148,7 +122,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
 
@@ -163,7 +137,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -177,7 +151,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
 
@@ -193,7 +167,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -207,7 +181,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                2
+                2,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -221,7 +195,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -235,7 +209,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
 
@@ -250,7 +224,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -264,7 +238,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeesListModel.add(
@@ -278,7 +252,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1
+                1,"Tirupathi"
             )
         )
         employeeProfileRecycler.layoutManager = GridLayoutManager(this,3)
@@ -301,6 +275,12 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
 
         })
         employeeProfileRecycler.adapter = myEmpAdapter
+
+
+        departmentChoise.setOnCheckedChangeListener { group, checkedId ->
+
+
+        }
 
     }
 
@@ -330,4 +310,6 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         }
 
     }
+
+
 }

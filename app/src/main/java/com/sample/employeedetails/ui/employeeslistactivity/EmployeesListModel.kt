@@ -13,6 +13,6 @@ class EmployeesListModel(
     val dateOfBirth: String,
     val joiningDate: String,
     val status: Int,
-
+val branch:String,
     val dateOfReliving: String? = null
 ) : Serializable

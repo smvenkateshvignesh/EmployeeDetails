@@ -46,7 +46,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:background="@color/white"
-                android:queryHint="Search.." />
+                android:queryHint="Search..." />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -87,51 +87,58 @@
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/AllDepartments"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="All" />
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/AndroidTeam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Android" />
-
+                <com.nex3z.togglebuttongroup.button.LabelToggle
+                    android:id="@+id/hRs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
+                    android:text="HRs" />
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/IOSTeam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="IOS" />
 
-                <com.nex3z.togglebuttongroup.button.LabelToggle
-                    android:id="@+id/Management"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_5dp"
-                    android:text="Management" />
+
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/Managers"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Managers" />
 
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/TestingTeam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Testing" />
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/WebTeam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Web" />
 
 
@@ -176,22 +183,25 @@
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/AllBranches"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="All" />
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/tirupathiBranch"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Chennai" />
 
                 <com.nex3z.togglebuttongroup.button.LabelToggle
                     android:id="@+id/chennaiBranch"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    android:textSize="@dimen/_12sp"
                     android:text="Tirupathi" />
 
 

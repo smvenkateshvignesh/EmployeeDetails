@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : BaseActivity() {
     override fun setLayout(): Int {
-        makeFullScreen()
+
         return R.layout.activity_splash_screen
     }
 

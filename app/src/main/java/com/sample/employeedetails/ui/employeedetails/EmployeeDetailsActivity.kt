@@ -33,13 +33,13 @@ class EmployeeDetailsActivity : BaseActivity() {
             swap(R.layout.activity_employee_details)
 
         },50)
-        employeeProfilePic.setOnClickListener {
-            if (isShowingInfo) {
-                swap(R.layout.activity_employee_details_first)
-            } else {
-                swap(R.layout.activity_employee_details)
-            }
-        }
+//        employeeProfilePic.setOnClickListener {
+//            if (isShowingInfo) {
+//                swap(R.layout.activity_employee_details_first)
+//            } else {
+//                swap(R.layout.activity_employee_details)
+//            }
+//        }
         cardProfile.setOnClickListener {
             val myIntent =
                 Intent(this@EmployeeDetailsActivity, UserProfileActivity::class.java)
@@ -67,7 +67,7 @@ class EmployeeDetailsActivity : BaseActivity() {
         if (intent.hasExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS)) {
             employeeDetails = intent.getSerializableExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS) as EmployeesListModel
             txtEmployeeName.text = employeeDetails?.name
-            txtEmployeeDesc.text = "(${employeeDetails?.designation})"
+            txtEmployeeDesc.text = "(${employeeDetails?.designation?.value})"
             Glide.with(this).load(employeeDetails?.profile).apply(RequestOptions.circleCropTransform())
                 .into(employeeProfilePic)
 

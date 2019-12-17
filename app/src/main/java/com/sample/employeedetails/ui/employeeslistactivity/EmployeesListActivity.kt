@@ -36,49 +36,49 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         }
         mySearchView = findViewById(R.id.empSearchView)
         employeesListModel = ArrayList()
-        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_two, "Tharunkumar Reddy", "Android Developer", "101", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1, "Tirupathi"))
-        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_one, "Dheeraj Deevi", "IOS Developer", "109", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1,"Tirupathi"))
+        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_two, "Tharunkumar Reddy",  DesignationCategory.ANDROID, "101", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1, OfficeBranches.TIRUPATHI))
+        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_one, "Dheeraj Deevi",  DesignationCategory.IOS, "109", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1,OfficeBranches.TIRUPATHI))
 
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Tharunkumar Chittimi",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "102",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.dummy_female_profile_pic,
                 "Sindhura",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "113",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Yugandhar Vadlamudi",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "102",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                0,"Tirupathi"
+                0,OfficeBranches.TIRUPATHI
             )
         )
 
@@ -86,28 +86,28 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
                 "Vignesh Venkatesh",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "103",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
                 "Naveen Kumar",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "102",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2014",
-                0,"Tirupathi"
+                0,OfficeBranches.TIRUPATHI
             )
         )
 
@@ -115,14 +115,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             EmployeesListModel(
                 R.drawable.dummy_female_profile_pic,
                 "Lahari",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "110",
                 "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
 
@@ -130,28 +130,28 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             EmployeesListModel(
                 R.drawable.dummy_female_profile_pic,
                 "Ramya Emuri",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "104",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
                 "Sudheer",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "112",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
 
@@ -160,56 +160,56 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             EmployeesListModel(
                 R.drawable.img_dummy_profile_one,
                 " Banu Harshavardhan",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "114",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Satish Kongondhi",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "105",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                2,"Tirupathi"
+                2,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Ghouse Moula",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "106",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.dummy_female_profile_pic,
                 "Sailekia",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "115",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
 
@@ -217,42 +217,42 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Kishore Anandha Reddy",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "107",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.dummy_female_profile_pic,
                 "Usha Rani",
-                "Android Developer",
+                DesignationCategory.ANDROID,
                 "108",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeesListModel.add(
             EmployeesListModel(
                 R.drawable.img_dummy_profile_two,
                 "Suneel",
-                "IOS Developer",
+                DesignationCategory.IOS,
                 "111",
                 "Tirupathi",
                 "9483578321",
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,"Tirupathi"
+                1,OfficeBranches.TIRUPATHI
             )
         )
         employeeProfileRecycler.layoutManager = GridLayoutManager(this,3)

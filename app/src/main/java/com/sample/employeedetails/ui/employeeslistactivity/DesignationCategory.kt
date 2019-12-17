@@ -1,3 +1,4 @@
 package com.sample.employeedetails.ui.employeeslistactivity
 
-enum class DesignationCategory {ANDROID,HRS,IOS,MANAGERS,TESTING,WEB}
+enum class DesignationCategory(val value: String) {ANDROID("Android Developer"),HRS("HR"),IOS("IOS Developer"),MANAGERS("Manager"),TESTING("Tester"),WEB("Web Developer")
+}

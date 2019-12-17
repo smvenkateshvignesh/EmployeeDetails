@@ -58,7 +58,7 @@
         android:text="THARUNKUMAR REDDY"
         android:textAllCaps="true"
 
-        android:textColor="@color/semiBlack"
+        android:textColor="@color/dimBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

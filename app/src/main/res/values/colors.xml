@@ -19,4 +19,5 @@
     <color name="employee_transparent">#85431BB9</color>
     <color name="cardSemiBlack">#455A65</color>
     <color name="liteBlue">#3799f4</color>
+    <color name="dimBlack">#DA313131</color>
 </resources>

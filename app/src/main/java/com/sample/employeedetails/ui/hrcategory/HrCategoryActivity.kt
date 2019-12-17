@@ -9,15 +9,14 @@ import androidx.constraintlayout.widget.ConstraintSet
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
+import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import kotlinx.android.synthetic.main.activity_hr_category.categoryAttendance
 import kotlinx.android.synthetic.main.activity_hr_category.categoryEmployee
 import kotlinx.android.synthetic.main.activity_hr_category_first.*
 
 class HrCategoryActivity : BaseActivity() {
     override fun initView(savedInstanceState: Bundle?) {
-
         setOnCLickListeners()
-
         Handler().postDelayed({
             swap(R.layout.activity_hr_category)
 
@@ -31,6 +30,10 @@ class HrCategoryActivity : BaseActivity() {
         }
         categoryAttendance.setOnClickListener {
             val intent=Intent(this@HrCategoryActivity,EmployeesListActivity::class.java)
+            startActivity(intent)
+        }
+        categoryDevices.setOnClickListener {
+            val intent=Intent(this@HrCategoryActivity,DeviceInfoActivity::class.java)
             startActivity(intent)
         }
     }

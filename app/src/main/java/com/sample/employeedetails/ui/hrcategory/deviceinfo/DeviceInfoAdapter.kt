@@ -34,7 +34,8 @@ class DeviceInfoAdapter(private val deviceInfoModel: ArrayList<DeviceInfoModel>)
             Glide.with(MyApplication.getApplicationContext())
                 .load(deviceInfoModel.deviceIcon)
                 .into(deviceImage)
-            deviceHeading.text = deviceInfoModel.deviceName
+            deviceHeading.text =" ${deviceInfoModel.deviceName}(${deviceInfoModel.deviceCount})"
+
         }
 
         private val deviceImage: ImageView = itemView.findViewById(R.id.deviceInfoLaptop)

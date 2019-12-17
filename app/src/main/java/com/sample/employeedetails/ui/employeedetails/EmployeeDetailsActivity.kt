@@ -12,6 +12,7 @@ import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
+import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import com.sample.employeedetails.ui.userprofile.UserProfileActivity
 import kotlinx.android.synthetic.main.activity_employee_details.*
 
@@ -24,6 +25,9 @@ class EmployeeDetailsActivity : BaseActivity() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        icon_back.setOnClickListener {
+            onBackPressed()
+        }
         getEmployeeDetails()
         Handler().postDelayed({
             swap(R.layout.activity_employee_details)
@@ -41,6 +45,10 @@ class EmployeeDetailsActivity : BaseActivity() {
                 Intent(this@EmployeeDetailsActivity, UserProfileActivity::class.java)
             myIntent.putExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS, employeeDetails)
             startActivity(myIntent)
+        }
+        cardDeviceInfo.setOnClickListener {
+            val intent=Intent(this@EmployeeDetailsActivity, DeviceInfoActivity::class.java)
+            startActivity(intent)
         }
     }
     private fun swap(layoutId: Int) {

@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintSet
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
-import kotlinx.android.synthetic.main.activity_hr_category.*
 import kotlinx.android.synthetic.main.activity_hr_category.categoryAttendance
 import kotlinx.android.synthetic.main.activity_hr_category.categoryEmployee
 import kotlinx.android.synthetic.main.activity_hr_category_first.*

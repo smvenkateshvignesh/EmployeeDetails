@@ -10,6 +10,7 @@
     tools:context=".ui.splashscreen.SplashScreenActivity">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_150dp"
         android:src="@drawable/splash_sceern_logo"/>

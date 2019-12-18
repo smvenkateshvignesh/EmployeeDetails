@@ -17,14 +17,14 @@ class DeviceInfoActivity : BaseActivity() {
     override fun initView(savedInstanceState: Bundle?) {
         deviceInfoModel = ArrayList()
         deviceInfoModel.add(DeviceInfoModel(1, R.drawable.laptop, "Laptops", 20))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.mobile, "Mobiles", 12))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.airconditioner, "Ac", 9))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.chairs, "Chairs", 23))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.bag, "Bags", 20))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.cable, "Cables", 2))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.charger, "Chargers", 10))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.mouse, "Mouse", 35))
-        deviceInfoModel.add(DeviceInfoModel(1, R.drawable.usb, "Pen Drives", 90))
+        deviceInfoModel.add(DeviceInfoModel(2, R.drawable.mobile, "Mobiles", 12))
+        deviceInfoModel.add(DeviceInfoModel(3, R.drawable.airconditioner, "Ac", 9))
+        deviceInfoModel.add(DeviceInfoModel(4, R.drawable.chairs, "Chairs", 23))
+        deviceInfoModel.add(DeviceInfoModel(5, R.drawable.bag, "Bags", 20))
+        deviceInfoModel.add(DeviceInfoModel(6, R.drawable.cable, "Cables", 2))
+        deviceInfoModel.add(DeviceInfoModel(7, R.drawable.ipad, "Tabs", 10))
+        deviceInfoModel.add(DeviceInfoModel(8, R.drawable.mouse, "Mouse", 35))
+        deviceInfoModel.add(DeviceInfoModel(9, R.drawable.usb, "Pen Drives", 90))
 
         deviceInfo_rv.layoutManager = GridLayoutManager(this, 3)
         deviceInfoAdapter = DeviceInfoAdapter(deviceInfoModel)
@@ -36,6 +36,5 @@ class DeviceInfoActivity : BaseActivity() {
         deviceInfoBack.setOnClickListener {
             onBackPressed()
         }
-
     }
 }

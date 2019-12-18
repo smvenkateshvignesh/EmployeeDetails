@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.hrcategory.projects.ProjectDashboardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProjectsDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/projectBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_back" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                style="@style/large_text_semi_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Projects"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtUpcomingProjectHeading"
+                style="@style/large_text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Projects"
+                android:textColor="@color/semiBlack"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:id="@+id/discreteScrollView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txtOngoingProjects"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/txtUpcomingProjectHeading" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtOngoingProjects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ongoing Projects"
+                style="@style/large_text_bold"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintTop_toBottomOf="@id/discreteScrollView"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                android:layout_marginTop="@dimen/_15dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/onGoingProject_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtOngoingProjects" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtCompletedProjects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Completed Projects"
+                style="@style/large_text_bold"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintTop_toBottomOf="@id/onGoingProject_rv"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/completedProjects_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCompletedProjects" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

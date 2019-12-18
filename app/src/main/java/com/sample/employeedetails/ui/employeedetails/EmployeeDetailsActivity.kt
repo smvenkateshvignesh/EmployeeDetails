@@ -12,6 +12,7 @@ import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
+import com.sample.employeedetails.ui.employeeslistactivity.employeedeviceinfo.EmployeeDeviceInfo
 import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import com.sample.employeedetails.ui.userprofile.UserProfileActivity
 import kotlinx.android.synthetic.main.activity_employee_details.*
@@ -47,7 +48,7 @@ class EmployeeDetailsActivity : BaseActivity() {
             startActivity(myIntent)
         }
         cardDeviceInfo.setOnClickListener {
-            val intent=Intent(this@EmployeeDetailsActivity, DeviceInfoActivity::class.java)
+            val intent=Intent(this@EmployeeDetailsActivity, EmployeeDeviceInfo::class.java)
             startActivity(intent)
         }
     }
@@ -70,8 +71,6 @@ class EmployeeDetailsActivity : BaseActivity() {
             txtEmployeeDesc.text = "(${employeeDetails?.designation?.value})"
             Glide.with(this).load(employeeDetails?.profile).apply(RequestOptions.circleCropTransform())
                 .into(employeeProfilePic)
-
-
         }
     }
 

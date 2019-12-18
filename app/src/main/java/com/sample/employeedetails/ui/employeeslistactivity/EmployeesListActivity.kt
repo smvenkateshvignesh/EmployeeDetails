@@ -36,8 +36,50 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         }
         mySearchView = findViewById(R.id.empSearchView)
         employeesListModel = ArrayList()
-        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_two, "Tharunkumar Reddy",  DesignationCategory.ANDROID, "101", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1, OfficeBranches.TIRUPATHI))
-        employeesListModel.add(EmployeesListModel(R.drawable.img_dummy_profile_one, "Dheeraj Deevi",  DesignationCategory.IOS, "109", "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ", "9483578321", 33.3F, "28 Nov 1997", "01 Aug 2019", 1,OfficeBranches.TIRUPATHI))
+        employeesListModel.add(
+            EmployeesListModel(
+                R.drawable.img_dummy_profile_two,
+                "Tharunkumar Reddy",
+                DesignationCategory.ANDROID,
+                "101",
+                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
+                "9483578321",
+                33.3F,
+                "28 Nov 1997",
+                "01 Aug 2019",
+                1,
+                OfficeBranches.TIRUPATHI,
+                "",
+                "Hp laptop",
+                "Honor 9N",
+                "Lenovo",
+                "USB 2.0",
+                "Lenovo p30",
+                ""
+            )
+        )
+        employeesListModel.add(
+            EmployeesListModel(
+                R.drawable.img_dummy_profile_one,
+                "Dheeraj Deevi",
+                DesignationCategory.IOS,
+                "109",
+                "Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 ",
+                "9483578321",
+                33.3F,
+                "28 Nov 1997",
+                "01 Aug 2019",
+                1,
+                OfficeBranches.TIRUPATHI,
+                "",
+                "Apple Mac",
+                "Apple XR",
+                "USB 2.0",
+                "Hp p30",
+                "Mac 2",
+                "Samsung 32GB"
+            )
+        )
 
         employeesListModel.add(
             EmployeesListModel(
@@ -50,7 +92,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+            "",
+                "Dell",
+                "Nokia 6",
+                "Lenovo",
+                "QHMPL cable",
+                "Logitech",
+                ""
             )
         )
         employeesListModel.add(
@@ -64,7 +113,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Apple X",
+                "Hp",
+                "Apple",
+                "Apple 2.2.0",
+                ""
             )
         )
         employeesListModel.add(
@@ -78,7 +134,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                0,OfficeBranches.TIRUPATHI
+                0, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Dell",
+                "Pixle 3a",
+                "Hp",
+                "Lenovo",
+                "Lenovo",
+                ""
             )
         )
 
@@ -93,7 +156,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Hp",
+                "Redmi 8",
+                "Hp",
+                "Nokia",
+                "Lenovo",
+                ""
             )
         )
         employeesListModel.add(
@@ -107,7 +177,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2014",
-                0,OfficeBranches.TIRUPATHI
+                0, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Dell",
+                "Nokia 6",
+                "Hp",
+                "Nokia",
+                "Lenovo",
+                ""
             )
         )
 
@@ -122,7 +199,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Apple 5",
+                "Hp",
+                "Lenovo",
+                "Apple 2.2.0",
+                ""
             )
         )
 
@@ -137,7 +221,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Sony",
+                "Lenovo",
+                "Hp",
+                "Lenovo",
+                "Samsung",
+                ""
             )
         )
         employeesListModel.add(
@@ -151,7 +242,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Apple 8",
+                "Hp",
+                "Apple 3",
+                "Apple 2.2.0",
+                ""
             )
         )
 
@@ -167,7 +265,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Apple 7",
+                "Lenovo",
+                "Lenovo",
+                "Netjik",
+                ""
             )
         )
         employeesListModel.add(
@@ -181,7 +286,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                2,OfficeBranches.TIRUPATHI
+                2, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Hp",
+                "Samsung A50",
+                "Hp",
+                "Lenovo",
+                "Lenovo",
+                ""
             )
         )
         employeesListModel.add(
@@ -195,7 +307,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Hp",
+                "Redmi 7",
+                "Hp",
+                "Nokia",
+                "Lenovo",
+                ""
             )
         )
         employeesListModel.add(
@@ -209,7 +328,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Ipad",
+                "Hp",
+                "Lenovo",
+                "Lenovo",
+                ""
             )
         )
 
@@ -224,7 +350,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Hp",
+                "Nokia 6.1",
+                "Hp",
+                "Nokia",
+                "Lenovo",
+                ""
             )
         )
         employeesListModel.add(
@@ -238,7 +371,14 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Hp",
+                "Samsung M10",
+                "Hp",
+                "Samsung",
+                "Lenovo",
+                "Hp 32GB"
             )
         )
         employeesListModel.add(
@@ -252,10 +392,17 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
                 33.3F,
                 "28 Nov 1997",
                 "01 Aug 2019",
-                1,OfficeBranches.TIRUPATHI
+                1, OfficeBranches.TIRUPATHI,
+                "" ,
+                "Apple Mac",
+                "Apple 6",
+                "Lenovo",
+                "Samsung",
+                "Lenovo",
+                ""
             )
         )
-        employeeProfileRecycler.layoutManager = GridLayoutManager(this,3)
+        employeeProfileRecycler.layoutManager = GridLayoutManager(this, 3)
         val itemOffsetDecoration1 =
             ItemOffsetDecoration(this, R.dimen._10dp)
         employeeProfileRecycler.addItemDecoration(itemOffsetDecoration1)
@@ -293,6 +440,7 @@ class EmployeesListActivity : BaseActivity(), android.widget.SearchView.OnQueryT
         myEmpAdapter.getFilter().filter(newText)
         return false
     }
+
     class ItemOffsetDecoration(private val mItemOffset: Int) : ItemDecoration() {
 
         constructor(context: Context, @DimenRes itemOffsetId: Int) : this(

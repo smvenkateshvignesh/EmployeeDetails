@@ -13,6 +13,14 @@ class EmployeesListModel(
     val dateOfBirth: String,
     val joiningDate: String,
     val status: Int,
-val branch:OfficeBranches,
-    val dateOfReliving: String? = null
+    val branch: OfficeBranches,
+    val dateOfReliving: String? = null,
+
+    /*device info details to assign each employee*/
+    val laptop:String,
+    val mobile:String,
+    val bag:String,
+    val cable:String,
+    val mouse:String,
+    val pendrive:String
 ) : Serializable

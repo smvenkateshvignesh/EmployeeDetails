@@ -10,6 +10,7 @@ import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
+import com.sample.employeedetails.ui.hrcategory.projects.ProjectDashboardActivity
 import kotlinx.android.synthetic.main.activity_hr_category.categoryAttendance
 import kotlinx.android.synthetic.main.activity_hr_category.categoryEmployee
 import kotlinx.android.synthetic.main.activity_hr_category_first.*
@@ -34,6 +35,10 @@ class HrCategoryActivity : BaseActivity() {
         }
         categoryDevices.setOnClickListener {
             val intent=Intent(this@HrCategoryActivity,DeviceInfoActivity::class.java)
+            startActivity(intent)
+        }
+        categoryProjects.setOnClickListener {
+            val intent = Intent(this@HrCategoryActivity, ProjectDashboardActivity::class.java)
             startActivity(intent)
         }
     }

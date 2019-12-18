@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.hrcategory.chooseattendence.attendancepickers.AttendancePickersActivity"></activity>
+        <activity android:name=".ui.hrcategory.chooseattendence.ChooseAttendanceActivity"></activity>
         <activity
             android:name=".ui.employeedetails.EmployeeDetailsActivity"
-            android:theme="@style/AppThemeFullScreen"></activity>
+            android:theme="@style/AppThemeFullScreen" />
         <activity
             android:name=".ui.splashscreen.SplashScreenActivity"
             android:theme="@style/AppThemeFullScreen">
@@ -29,7 +31,8 @@
         <activity android:name=".ui.employeeslistactivity.EmployeesListActivity">
 
         </activity>
-        <activity android:name=".ui.hrcategory.HrCategoryActivity"></activity>
+        <activity android:name=".ui.hrcategory.HrCategoryActivity"
+            android:launchMode="singleTask" ></activity>
         <activity android:name=".ui.hrcategory.deviceinfo.DeviceInfoActivity">
 
         </activity>

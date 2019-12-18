@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
+import com.sample.employeedetails.ui.hrcategory.chooseattendence.ChooseAttendanceActivity
 import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import com.sample.employeedetails.ui.hrcategory.projects.ProjectDashboardActivity
 import kotlinx.android.synthetic.main.activity_hr_category.categoryAttendance
@@ -30,7 +31,7 @@ class HrCategoryActivity : BaseActivity() {
             startActivity(intent)
         }
         categoryAttendance.setOnClickListener {
-            val intent=Intent(this@HrCategoryActivity,EmployeesListActivity::class.java)
+            val intent=Intent(this@HrCategoryActivity,ChooseAttendanceActivity::class.java)
             startActivity(intent)
         }
         categoryDevices.setOnClickListener {

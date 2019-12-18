@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/yearPickerMiniTitle"
+        style="@style/medium_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:gravity="center"
+        android:text="You can only choose 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/yearPickerTitle"
+        style="@style/extra_large_text_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:gravity="center"
+        android:textColor="@color/dimBlack"
+        android:text="Please choose your attendence type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearPickerMiniTitle" />
+
+
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/horizontal_number_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:np_dividerColor="@color/cardSemiBlack"
+        app:np_fadingEdgeEnabled="true"
+        app:np_height="@dimen/_200dp"
+        app:np_max="2019"
+        app:np_min="2000"
+        app:np_value="2019"
+        android:focusedByDefault="true"
+        app:np_order="descending"
+        app:np_orientation="vertical"
+        app:np_selectedTextColor="@color/colorAccent"
+        app:np_selectedTextSize="@dimen/_20sp"
+        app:np_textColor="@color/colorAccent"
+        app:np_textSize="@dimen/_18sp"
+        app:np_width="@dimen/_100dp"
+        app:np_wrapSelectorWheel="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabYearPicker"
+        android:layout_width="@dimen/_54dp"
+        android:layout_height="@dimen/_54dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

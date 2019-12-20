@@ -35,27 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chooseAttendenceMiniTitle" />
 
-<!--    <com.shawnlin.numberpicker.NumberPicker-->
-<!--        android:id="@+id/horizontal_number_picker"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/leaves"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/chooseAttendenceTitle"-->
-<!--        app:np_dividerColor="@color/colorAccent"-->
-<!--        app:np_fadingEdgeEnabled="true"-->
-<!--        app:np_height="@dimen/_180dp"-->
-<!--        app:np_max="10"-->
-<!--        app:np_min="0"-->
-<!--        app:np_order="descending"-->
-<!--        app:np_orientation="vertical"-->
-<!--        app:np_selectedTextColor="@color/colorAccent"-->
-<!--        app:np_selectedTextSize="@dimen/_20sp"-->
-<!--        app:np_textColor="@color/colorAccent"-->
-<!--        app:np_textSize="@dimen/_18sp"-->
-<!--        app:np_width="@dimen/_64dp"-->
-<!--        app:np_wrapSelectorWheel="true" />-->
+
     <ImageView
         android:id="@+id/imgChooseAttendenceBack"
         android:layout_width="wrap_content"

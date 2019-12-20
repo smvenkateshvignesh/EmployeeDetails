@@ -1,19 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/monthPickerMiniTitle"
+        style="@style/medium_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:gravity="center"
+        android:text="You can only choose 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMonthPickerAttendenceBack" />
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/monthPickerTitle"
+        style="@style/extra_large_text_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginRight="@dimen/_50dp"
+        android:gravity="center"
+        android:text="Please choose your attendence type"
+        android:textColor="@color/dimBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthPickerMiniTitle" />
+
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgMonthPickerAttendenceBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_back" />
+
+    <com.nex3z.togglebuttongroup.SingleSelectToggleGroup
+        android:id="@+id/group_choices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:background="@drawable/bg_month_picker"
+        android:focusedByDefault="true"
+        android:padding="@dimen/_20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/circle_shape" />
+        app:tbgCheckedButton="@+id/choiceDEC"
+        app:tbgChildSpacing="auto"
+        app:tbgChildSpacingForLastRow="align">
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceJAN"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="JAN"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceFEB"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="FEB"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceMAR"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="MAR"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceAPR"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="APR"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceMAY"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="MAY"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceJUN"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="JUN"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceJUL"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="JUL"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceAUG"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="AUG"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceSEP"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="SEP"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceOCT"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="OCT"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceNOV"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="NOV"
+            android:textSize="@dimen/_14sp" />
+
+        <com.nex3z.togglebuttongroup.button.CircularToggle
+            android:id="@+id/choiceDEC"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:text="DEC"
+            android:textSize="@dimen/_14sp" />
+    </com.nex3z.togglebuttongroup.SingleSelectToggleGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabmonthPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:foregroundGravity="center"
+        android:scaleType="center"
+        android:src="@drawable/ic_right"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

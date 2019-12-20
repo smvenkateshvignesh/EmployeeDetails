@@ -30,12 +30,12 @@ class ChooseAttendanceActivity : BaseActivity() {
         leaves.setOnClickListener {
             val intent = Intent(this@ChooseAttendanceActivity, AttendancePickersActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
         permissions.setOnClickListener {
-            val intent = Intent(this@ChooseAttendanceActivity, EmployeesListActivity::class.java)
+            val intent = Intent(this@ChooseAttendanceActivity, AttendancePickersActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
         imgChooseAttendenceBack.setOnClickListener {
             onBackPressed()

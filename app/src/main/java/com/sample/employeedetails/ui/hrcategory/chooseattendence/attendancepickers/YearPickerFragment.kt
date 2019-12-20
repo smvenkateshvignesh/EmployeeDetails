@@ -19,7 +19,10 @@ class YearPickerFragment :BaseFragment(){
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        imgYearPickerAttendenceBack.setOnClickListener {
+            activity?.onBackPressed()
 
+        }
         fabYearPicker.setOnClickListener{
 
             val fm = activity?.supportFragmentManager
@@ -28,6 +31,7 @@ class YearPickerFragment :BaseFragment(){
                 ?.addToBackStack(null)
                 ?.commit()
         }
+
     }
 
 

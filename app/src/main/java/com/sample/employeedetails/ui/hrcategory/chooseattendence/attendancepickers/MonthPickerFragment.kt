@@ -11,6 +11,7 @@ import android.widget.TextView
 
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseFragment
+import kotlinx.android.synthetic.main.fragment_attendance_month_picker.*
 
 
 class MonthPickerFragment :BaseFragment() {
@@ -19,6 +20,9 @@ class MonthPickerFragment :BaseFragment() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
+        imgMonthPickerAttendenceBack.setOnClickListener{
+            activity?.onBackPressed()
+        }
     }
 
 

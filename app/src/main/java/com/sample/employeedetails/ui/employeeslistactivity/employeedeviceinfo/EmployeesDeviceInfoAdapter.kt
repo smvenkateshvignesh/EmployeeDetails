@@ -16,10 +16,13 @@ import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoModel
 class EmployeesDeviceInfoAdapter(private val deviceInfoModel: ArrayList<DeviceInfoModel>) :
     RecyclerView.Adapter<EmployeesDeviceInfoAdapter.EmployeesDeviceInfoViewHolder>() {
 
-    private var employeeDetails: EmployeesListModel?= null
+    private var employeeDetails: EmployeesListModel? = null
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeesDeviceInfoViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): EmployeesDeviceInfoViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.device_info_rv, parent, false)
         return EmployeesDeviceInfoViewHolder(view)
@@ -33,21 +36,12 @@ class EmployeesDeviceInfoAdapter(private val deviceInfoModel: ArrayList<DeviceIn
         holder.bind(deviceInfoModel[position])
     }
 
-    inner class  EmployeesDeviceInfoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class EmployeesDeviceInfoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(deviceInfoModel: DeviceInfoModel) {
             Glide.with(MyApplication.getApplicationContext())
                 .load(deviceInfoModel.deviceIcon)
                 .into(deviceImage)
-            deviceHeading.text =deviceInfoModel.deviceName
-
-            when(deviceInfoModel.id){
-               1 ->{
-                    deviceHeading.text = employeeDetails?.laptop
-                }
-                2 ->{
-                    deviceHeading.text = employeeDetails?.mobile
-                }
-            }
+            deviceHeading.text = deviceInfoModel.deviceName
         }
 
         private val deviceImage: ImageView = itemView.findViewById(R.id.deviceInfoLaptop)
@@ -55,7 +49,7 @@ class EmployeesDeviceInfoAdapter(private val deviceInfoModel: ArrayList<DeviceIn
 
     }
 
-    interface getDeviceInfo{
-       fun getEmployeeDeviceInfo()
+    interface getDeviceInfo {
+        fun getEmployeeDeviceInfo()
     }
 }

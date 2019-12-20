@@ -9,10 +9,10 @@ class DiscreteScrollViewModel {
 
     fun getData(): List<DiscreteScrollViewItem> {
         return listOf(
-            DiscreteScrollViewItem((R.drawable.img_dummy_profile_one),"Dental For CheckUp"),
-            DiscreteScrollViewItem((R.drawable.img_dummy_profile_one),"Dental For CheckUp"),
-            DiscreteScrollViewItem((R.drawable.img_dummy_profile_one),"Dental For CheckUp"),
-            DiscreteScrollViewItem((R.drawable.img_dummy_profile_one),"Dental For CheckUp")
+            DiscreteScrollViewItem((R.drawable.dummy_pic),"Dental CheckUp"),
+            DiscreteScrollViewItem((R.drawable.dummy_pic),"Dental CheckUp"),
+            DiscreteScrollViewItem((R.drawable.dummy_pic),"Dental CheckUp"),
+            DiscreteScrollViewItem((R.drawable.dummy_pic),"Dental CheckUp")
             )
     }
 }

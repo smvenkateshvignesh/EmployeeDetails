@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sample.employeedetails.R
@@ -33,12 +35,23 @@ class DiscreteScrollViewAdapter(private val data: List<DiscreteScrollViewItem>) 
                 .load(data.getImage())
                 .into(imageUpcomingProject)
             titleUpcomingProject.text = data.getText()
+
+            if (position==0) {
+                val params = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                params.setMargins(70, 0, 0, 0)
+                cardUpcoming.layoutParams = params
+            }
         }
 
         private val imageUpcomingProject: ImageView =
             itemView.findViewById(R.id.imageDiscreteScrollView)
         private val titleUpcomingProject: TextView =
             itemView.findViewById(R.id.titleUpcomingProject)
+        private val cardUpcoming: CardView =
+            itemView.findViewById(R.id.cardUpcoming)
 
     }
 }

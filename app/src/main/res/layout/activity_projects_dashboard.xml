@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="Upcoming Projects"
                 android:textColor="@color/semiBlack"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guideline3"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -82,11 +82,12 @@
                 android:id="@+id/discreteScrollView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:visibility="gone"
+                android:visibility="visible"
+                app:dsv_orientation="horizontal"
                 android:layout_marginTop="@dimen/_15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/txtOngoingProjects"
-                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtUpcomingProjectHeading" />
 
             <com.sample.employeedetails.widgets.MyTextView

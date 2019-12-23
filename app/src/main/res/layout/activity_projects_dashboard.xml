@@ -53,6 +53,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:overScrollMode="never"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,29 +79,52 @@
                 app:layout_constraintStart_toStartOf="@id/guideline3"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtSeeAllUpcoming"
+                style="@style/large_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="See all"
+                app:layout_constraintBottom_toBottomOf="@id/txtUpcomingProjectHeading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtUpcomingProjectHeading" />
+
+
             <com.yarolegovich.discretescrollview.DiscreteScrollView
                 android:id="@+id/discreteScrollView"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_15dp"
                 android:visibility="visible"
                 app:dsv_orientation="horizontal"
-                android:layout_marginTop="@dimen/_15dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/txtOngoingProjects"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtUpcomingProjectHeading" />
 
             <com.sample.employeedetails.widgets.MyTextView
                 android:id="@+id/txtOngoingProjects"
+                style="@style/large_text_bold"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Ongoing Projects"
-                style="@style/large_text_bold"
-                android:textColor="@color/semiBlack"
-                app:layout_constraintTop_toBottomOf="@id/discreteScrollView"
-                app:layout_constraintStart_toStartOf="@id/guideline3"
                 android:layout_marginTop="@dimen/_15dp"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="Ongoing Projects"
+                android:textColor="@color/semiBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@id/discreteScrollView" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtSeeAllOngoing"
+                style="@style/large_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="See all"
+                app:layout_constraintBottom_toBottomOf="@id/txtOngoingProjects"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtOngoingProjects" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/onGoingProject_rv"
@@ -113,15 +137,26 @@
 
             <com.sample.employeedetails.widgets.MyTextView
                 android:id="@+id/txtCompletedProjects"
+                style="@style/large_text_bold"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
                 android:text="Completed Projects"
-                style="@style/large_text_bold"
                 android:textColor="@color/semiBlack"
-                app:layout_constraintTop_toBottomOf="@id/onGoingProject_rv"
-                app:layout_constraintStart_toStartOf="@id/guideline3"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="@dimen/_15dp"/>
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@id/onGoingProject_rv" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                android:id="@+id/txtSeeAllCompleted"
+                style="@style/large_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="See all"
+                app:layout_constraintBottom_toBottomOf="@id/txtCompletedProjects"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtCompletedProjects" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/completedProjects_rv"

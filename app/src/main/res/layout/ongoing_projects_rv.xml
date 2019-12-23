@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/_20dp">
+    android:paddingBottom="@dimen/_10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardOnGoingProject"
@@ -31,25 +31,36 @@
 
     </androidx.cardview.widget.CardView>
 
-    <com.sample.employeedetails.widgets.MyTextView
-        android:id="@+id/txtAppName"
-        style="@style/large_text"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="CompIndia App"
-        android:textColor="@color/semiBlack" />
+        android:layout_height="wrap_content">
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtAppName"
+            style="@style/large_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="CompIndia App"
+            android:textColor="@color/semiBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.sample.employeedetails.widgets.MyTextView
-        android:id="@+id/txtAppSubName"
-        style="@style/small_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="Android Tech." />
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtAppSubName"
+            style="@style/small_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Android Tech."
+            app:layout_constraintTop_toBottomOf="@id/txtAppName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

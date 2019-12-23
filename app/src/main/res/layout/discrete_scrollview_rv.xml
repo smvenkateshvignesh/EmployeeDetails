@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/_12dp"
-        app:cardElevation="0dp"
+        app:cardElevation="@dimen/_5dp"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageDiscreteScrollView"
@@ -33,7 +33,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginBottom="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:layout_marginBottom="@dimen/_7dp"
                 android:text="Dental For CheckUp"
                 android:textColor="@color/cardSemiBlack"
                 app:layout_constraintBottom_toBottomOf="parent"

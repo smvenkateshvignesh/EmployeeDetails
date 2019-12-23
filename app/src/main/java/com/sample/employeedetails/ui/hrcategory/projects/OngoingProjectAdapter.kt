@@ -36,14 +36,14 @@ class OngoingProjectAdapter(private val ongoingProjectModel: ArrayList<OngoingPr
             appTitle.text = ongoingProjectModel.appTitle
             appSubtitle.text=ongoingProjectModel.appSubTitle
 
-            if (position==0) {
-                val params = LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-                )
-                params.setMargins(70, 0, 0, 0)
-                cardView.layoutParams = params
-            }
+//            if (position==0) {
+//                val params = LinearLayout.LayoutParams(
+//                    ViewGroup.LayoutParams.MATCH_PARENT,
+//                    ViewGroup.LayoutParams.WRAP_CONTENT
+//                )
+//                params.setMargins(50, 0, 0, 0)
+//                cardView.layoutParams = params
+//            }
         }
 
         private var imageApp: ImageView = itemView.findViewById(R.id.ImageOnGoingProject)

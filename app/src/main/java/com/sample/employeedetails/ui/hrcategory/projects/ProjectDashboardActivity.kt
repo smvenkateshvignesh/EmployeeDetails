@@ -24,14 +24,22 @@ class ProjectDashboardActivity : BaseActivity() {
         val discreteScrollViewModel=DiscreteScrollViewModel()
         discreteScrollViewModel.get()
         val data:List<DiscreteScrollViewItem> = discreteScrollViewModel.getData()
-        val discreteScrollViewAdapter=DiscreteScrollViewAdapter(data)
-
-        val infiniteScrollAdapter=InfiniteScrollAdapter(discreteScrollViewAdapter)
-
+        val infiniteScrollAdapter=InfiniteScrollAdapter(DiscreteScrollViewAdapter(data))
         discreteScrollView.adapter = infiniteScrollAdapter
-
         discreteScrollView.setOverScrollEnabled(true)
-
+        discreteScrollView.setOffscreenItems(2)
+        discreteScrollView.setItemTransitionTimeMillis(1000)
+//        val timerHandler = Handler()
+//        val timerRunnable: Runnable
+//
+//        timerRunnable=object :Runnable {
+//            override fun run() {
+//
+//                discreteScrollView.smoothScrollBy(20, 0)
+//                timerHandler.postDelayed(this, 100)
+//            }
+//        }
+//        timerHandler.postDelayed(timerRunnable,4000)
 
         /*-----OnGoingProject RecyclerView-----*/
         ongoingProjectModel = ArrayList()

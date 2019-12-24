@@ -13,9 +13,12 @@ import com.sample.employeedetails.base.BaseActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
 import com.sample.employeedetails.ui.employeeslistactivity.employeedeviceinfo.EmployeeDeviceInfo
+import com.sample.employeedetails.ui.employeeslistactivity.salaryprogress.SalaryProgressActivity
+import com.sample.employeedetails.ui.hrcategory.chooseattendence.ChooseAttendanceActivity
 import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import com.sample.employeedetails.ui.userprofile.UserProfileActivity
 import kotlinx.android.synthetic.main.activity_employee_details.*
+import kotlinx.android.synthetic.main.activity_hr_category.*
 
 class EmployeeDetailsActivity : BaseActivity() {
     private var isShowingInfo = false
@@ -46,6 +49,14 @@ class EmployeeDetailsActivity : BaseActivity() {
                 Intent(this@EmployeeDetailsActivity, UserProfileActivity::class.java)
             myIntent.putExtra(EmployeesListActivity.BUNDEL_EMPLOYEE_DETAILS, employeeDetails)
             startActivity(myIntent)
+        }
+        cardSalaryProgress.setOnClickListener{
+            val intent=Intent(this@EmployeeDetailsActivity, SalaryProgressActivity::class.java)
+            startActivity(intent)
+        }
+        cardAttendance.setOnClickListener {
+            val intent=Intent(this@EmployeeDetailsActivity, ChooseAttendanceActivity::class.java)
+            startActivity(intent)
         }
         cardDeviceInfo.setOnClickListener {
             val intent=Intent(this@EmployeeDetailsActivity, EmployeeDeviceInfo::class.java)

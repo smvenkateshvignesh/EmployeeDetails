@@ -17,7 +17,7 @@ class MyCardView : LinearLayout {
     private var txtCardHeading: MyTextView? = null
 
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         if (!isInEditMode)
@@ -59,13 +59,13 @@ class MyCardView : LinearLayout {
         txtCardHeading = myView.findViewById(R.id.txtCardHeading)
     }
 
-    fun setIcon(img: Drawable?) {
+    private fun setIcon(img: Drawable?) {
         imgCardIcon?.let {
             Glide.with(context).load(img).into(it)
         }
     }
 
-    fun setHeader(header: String?) {
+    private fun setHeader(header: String?) {
         txtCardHeading?.let {
             it.text = header?:""
         }

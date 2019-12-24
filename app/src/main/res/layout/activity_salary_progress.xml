@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.employeeslistactivity.salaryprogress.SalaryProgressActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:gravity="fill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/icBarChartBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/icon_back" />
+
+            <com.sample.employeedetails.widgets.MyTextView
+                style="@style/large_text_semi_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Salary Progress"
+                android:textColor="@color/semiBlack" />
+            <ImageView
+                android:id="@+id/icBarChartOptions"
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_25dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_2dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10dp"
+                app:srcCompat="@drawable/ic_menu_vertical_dots" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/salaryBarChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtSalaryInYears"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSalaryType"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/txtSalaryInYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Years"
+        android:textColor="@color/semiBlack"
+        style="@style/medium_text_bold"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.sample.employeedetails.widgets.MyTextView
+        android:id="@+id/txtSalaryType"
+        style="@style/medium_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-90"
+        android:visibility="gone"
+        android:text="Salary in percentage"
+        android:textColor="@color/semiBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/salaryBarChart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/salaryBarChart" />
+
+    <LinearLayout
+        android:id="@+id/salaryProgressLinearLayout"
+        android:layout_width="@dimen/_90dp"
+        android:layout_height="@dimen/_90dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/_20dp"
+        app:layout_constraintEnd_toEndOf="@+id/salaryBarChart"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtAmountMenu"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+        android:gravity="center_vertical"
+            android:text="Amount"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:textColor="@color/semiBlack"
+          />
+        <com.sample.employeedetails.widgets.MyTextView
+            android:id="@+id/txtPercentageMenu"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:gravity="center_vertical"
+            android:text="Percentage"
+            android:textColor="@color/semiBlack"
+            />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

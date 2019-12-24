@@ -8,7 +8,7 @@ import android.widget.EditText
 import com.sample.employeedetails.R
 
 class MyEditText : EditText {
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         if (!isInEditMode)

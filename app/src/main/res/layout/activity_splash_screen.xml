@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="@dimen/_150dp"
-        android:layout_height="@dimen/_150dp"
-        android:src="@drawable/splash_sceern_logo"/>
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:src="@drawable/compindia_splash_logo"/>
 
 </LinearLayout>

@@ -1,12 +1,9 @@
 package com.sample.employeedetails.ui.hrcategory.projects
 
 import android.os.Bundle
-import android.os.Handler
-import androidx.core.os.postDelayed
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
-import com.yarolegovich.discretescrollview.DiscreteScrollView
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter
 import kotlinx.android.synthetic.main.activity_projects_dashboard.*
 

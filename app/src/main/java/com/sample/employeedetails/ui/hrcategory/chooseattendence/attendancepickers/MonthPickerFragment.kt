@@ -12,6 +12,7 @@ import android.widget.TextView
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_attendance_month_picker.*
+import kotlinx.android.synthetic.main.fragment_attendance_year_picker.*
 
 
 class MonthPickerFragment :BaseFragment() {
@@ -23,6 +24,17 @@ class MonthPickerFragment :BaseFragment() {
         imgMonthPickerAttendenceBack.setOnClickListener{
             activity?.onBackPressed()
         }
+
+
+        fabmonthPicker.setOnClickListener{
+
+            val fm = activity?.supportFragmentManager
+            fm?.beginTransaction()
+                ?.replace(R.id.attendenceChooserFrameLayout, EmployeeAttendanceDetailsFragment())
+                ?.addToBackStack(null)
+                ?.commit()
+        }
+
     }
 
 

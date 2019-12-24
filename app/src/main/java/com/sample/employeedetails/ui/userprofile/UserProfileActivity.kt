@@ -7,11 +7,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.sample.employeedetails.R
 import com.sample.employeedetails.base.BaseActivity
-import com.sample.employeedetails.ui.employeeslistactivity.DesignationCategory
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
 import kotlinx.android.synthetic.main.activity_user_profile.*
-import kotlin.math.absoluteValue
 
 class UserProfileActivity : BaseActivity() {
     override fun setLayout(): Int {

@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.sample.employeedetails.R
 
 class MyTextView : TextView {
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         if (!isInEditMode)

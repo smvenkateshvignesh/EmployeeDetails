@@ -5,11 +5,10 @@ import android.graphics.Typeface
 import android.os.Build
 import android.util.AttributeSet
 import android.widget.Button
-import android.widget.EditText
 import com.sample.employeedetails.R
 
 class MyButton : Button {
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         if (!isInEditMode)

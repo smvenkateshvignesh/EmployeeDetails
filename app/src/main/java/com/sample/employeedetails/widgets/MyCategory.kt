@@ -16,7 +16,7 @@ class MyCategory : LinearLayout {
     private var imgCardIcon: ImageView? = null
     private var txtCardHeading: MyTextView? = null
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         if (!isInEditMode)

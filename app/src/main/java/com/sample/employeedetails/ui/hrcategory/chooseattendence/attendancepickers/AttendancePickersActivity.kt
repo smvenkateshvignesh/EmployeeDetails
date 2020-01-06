@@ -23,7 +23,6 @@ class AttendancePickersActivity : BaseActivity(),PickersActivityCommunicator {
     }
 
     override fun onBackPressed() {
-
          if (supportFragmentManager.backStackEntryCount > 1) {
             supportFragmentManager.popBackStack()
         } else {

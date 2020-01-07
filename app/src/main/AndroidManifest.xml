@@ -37,6 +37,7 @@
         <activity android:name=".ui.hrcategory.deviceinfo.DeviceInfoActivity"></activity>
         <activity android:name=".ui.hrcategory.projects.ProjectDashboardActivity"></activity>
         <activity android:name=".ui.employeeslistactivity.employeedeviceinfo.EmployeeDeviceInfo" />
+        <activity android:name=".ui.employeeslistactivity.team.TeamGraphActivity" />
     </application>
 
 </manifest>

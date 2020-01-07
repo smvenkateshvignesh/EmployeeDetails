@@ -14,6 +14,7 @@ import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListActivity
 import com.sample.employeedetails.ui.employeeslistactivity.EmployeesListModel
 import com.sample.employeedetails.ui.employeeslistactivity.employeedeviceinfo.EmployeeDeviceInfo
 import com.sample.employeedetails.ui.employeeslistactivity.salaryprogress.SalaryProgressActivity
+import com.sample.employeedetails.ui.employeeslistactivity.team.TeamGraphActivity
 import com.sample.employeedetails.ui.hrcategory.chooseattendence.ChooseAttendanceActivity
 import com.sample.employeedetails.ui.hrcategory.deviceinfo.DeviceInfoActivity
 import com.sample.employeedetails.ui.userprofile.UserProfileActivity
@@ -62,6 +63,11 @@ class EmployeeDetailsActivity : BaseActivity() {
             val intent=Intent(this@EmployeeDetailsActivity, EmployeeDeviceInfo::class.java)
             startActivity(intent)
         }
+        cardTeam.setOnClickListener {
+            val intent=Intent(this@EmployeeDetailsActivity, TeamGraphActivity::class.java)
+            startActivity(intent)
+        }
+
     }
     private fun swap(layoutId: Int) {
         val constraintSet = ConstraintSet()

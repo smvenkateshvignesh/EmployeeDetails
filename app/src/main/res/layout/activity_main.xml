@@ -90,6 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/_30dp"
                     android:layout_marginLeft="@dimen/_5dp"
+                    app:tbgMarkerColor="@color/Grey"
                     android:textSize="@dimen/_12sp"
                     android:text="All" />
 
